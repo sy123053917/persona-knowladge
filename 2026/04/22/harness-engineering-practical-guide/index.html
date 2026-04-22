@@ -20,24 +20,30 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"sy123053917.github.io","root":"/persona-knowladge/","images":"/persona-knowladge/images","scheme":"Muse","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/persona-knowladge/js/config.js" defer></script>
 
-    <meta name="description" content="分享技术与生活">
-<meta property="og:type" content="website">
-<meta property="og:title" content="个人博客">
-<meta property="og:url" content="https://sy123053917.github.io/persona-knowladge/index.html">
+    <meta name="description" content="提示词已经不够用了！深度拆解 AI 下半场密码：Harness Engineering —— 给烈马配上缰绳、马鞍、跑道护栏和反馈镜子   一、 Harness Engineering 是什么？1.1 一个形象的比喻想象 AI 大模型是一匹烈马：  它力大无穷，能日行千里 但它野性难驯，随时可能脱缰 它不认识路，可能一头撞向悬崖 它跑累了就停下，不管任务完成没有  Harness Enginee">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Harness Engineering 实战：从零构建 AI Agent 的「缰绳与马鞍」">
+<meta property="og:url" content="https://sy123053917.github.io/persona-knowladge/2026/04/22/harness-engineering-practical-guide/index.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:description" content="分享技术与生活">
+<meta property="og:description" content="提示词已经不够用了！深度拆解 AI 下半场密码：Harness Engineering —— 给烈马配上缰绳、马鞍、跑道护栏和反馈镜子   一、 Harness Engineering 是什么？1.1 一个形象的比喻想象 AI 大模型是一匹烈马：  它力大无穷，能日行千里 但它野性难驯，随时可能脱缰 它不认识路，可能一头撞向悬崖 它跑累了就停下，不管任务完成没有  Harness Enginee">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-04-22T03:30:00.000Z">
+<meta property="article:modified_time" content="2026-04-22T03:29:15.038Z">
 <meta property="article:author" content="博主">
+<meta property="article:tag" content="AI Agent">
+<meta property="article:tag" content="Harness Engineering">
+<meta property="article:tag" content="工程实践">
+<meta property="article:tag" content="系统架构">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://sy123053917.github.io/persona-knowladge/">
+<link rel="canonical" href="https://sy123053917.github.io/persona-knowladge/2026/04/22/harness-engineering-practical-guide/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://sy123053917.github.io/persona-knowladge/2026/04/22/harness-engineering-practical-guide/","path":"2026/04/22/harness-engineering-practical-guide/","title":"Harness Engineering 实战：从零构建 AI Agent 的「缰绳与马鞍」"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>个人博客</title>
+<title>Harness Engineering 实战：从零构建 AI Agent 的「缰绳与马鞍」 | 个人博客</title>
   
 
 
@@ -84,7 +90,7 @@
 
     <a href="/persona-knowladge/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">个人博客</h1>
+      <p class="site-title">个人博客</p>
       <i class="logo-line"></i>
     </a>
   </div>
@@ -106,7 +112,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -119,6 +125,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81-Harness-Engineering-%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">一、 Harness Engineering 是什么？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E4%B8%80%E4%B8%AA%E5%BD%A2%E8%B1%A1%E7%9A%84%E6%AF%94%E5%96%BB"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 一个形象的比喻</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81-Harness%EF%BC%9F"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 为什么需要 Harness？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81-Harness-%E7%9A%84%E4%BA%94%E5%A4%A7%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6"><span class="nav-number">2.</span> <span class="nav-text">二、 Harness 的五大核心组件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E7%BC%B0%E7%BB%B3%EF%BC%9A%E5%B7%A5%E5%85%B7%E8%B0%83%E7%94%A8%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%EF%BC%88Tool-Calling-Harness%EF%BC%89"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 缰绳：工具调用控制系统（Tool Calling Harness）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E5%9C%BA%E6%99%AF"><span class="nav-number">2.1.1.</span> <span class="nav-text">问题场景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Harness-%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="nav-number">2.1.2.</span> <span class="nav-text">Harness 解决方案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-%E9%A9%AC%E9%9E%8D%EF%BC%9A%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%88Context-Management-Harness%EF%BC%89"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 马鞍：上下文管理系统（Context Management Harness）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E5%9C%BA%E6%99%AF-1"><span class="nav-number">2.2.1.</span> <span class="nav-text">问题场景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Harness-%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88-1"><span class="nav-number">2.2.2.</span> <span class="nav-text">Harness 解决方案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-%E8%B7%91%E9%81%93%E6%8A%A4%E6%A0%8F%EF%BC%9A%E5%AE%89%E5%85%A8%E6%B2%99%E7%AE%B1%E7%B3%BB%E7%BB%9F%EF%BC%88Security-Sandbox-Harness%EF%BC%89"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 跑道护栏：安全沙箱系统（Security Sandbox Harness）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E5%9C%BA%E6%99%AF-2"><span class="nav-number">2.3.1.</span> <span class="nav-text">问题场景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Harness-%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88-2"><span class="nav-number">2.3.2.</span> <span class="nav-text">Harness 解决方案</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-%E5%8F%8D%E9%A6%88%E9%95%9C%E5%AD%90%EF%BC%9A%E7%9B%91%E6%8E%A7%E4%B8%8E%E5%8F%AF%E8%A7%82%E6%B5%8B%E6%80%A7%E7%B3%BB%E7%BB%9F%EF%BC%88Observability-Harness%EF%BC%89"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 反馈镜子：监控与可观测性系统（Observability Harness）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E5%9C%BA%E6%99%AF-3"><span class="nav-number">2.4.1.</span> <span class="nav-text">问题场景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Harness-%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88-3"><span class="nav-number">2.4.2.</span> <span class="nav-text">Harness 解决方案</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E6%95%B4%E5%90%88%EF%BC%9A%E6%9E%84%E5%BB%BA%E5%AE%8C%E6%95%B4%E7%9A%84-Harness-%E7%B3%BB%E7%BB%9F"><span class="nav-number">3.</span> <span class="nav-text">三、整合：构建完整的 Harness 系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-%E7%BB%9F%E4%B8%80%E5%85%A5%E5%8F%A3"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 统一入口</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E4%BB%8E-0-%E5%88%B0-1%EF%BC%9A%E5%AE%9E%E6%88%98-Checklist"><span class="nav-number">4.</span> <span class="nav-text">四、从 0 到 1：实战 Checklist</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Week-1-%E5%9F%BA%E7%A1%80-Harness"><span class="nav-number">4.1.</span> <span class="nav-text">Week 1: 基础 Harness</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Week-2-%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AE%A1%E7%90%86"><span class="nav-number">4.2.</span> <span class="nav-text">Week 2: 上下文管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Week-3-%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4"><span class="nav-number">4.3.</span> <span class="nav-text">Week 3: 安全防护</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Week-4-%E5%8F%AF%E8%A7%82%E6%B5%8B%E6%80%A7"><span class="nav-number">4.4.</span> <span class="nav-text">Week 4: 可观测性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Week-5-%E7%94%9F%E4%BA%A7%E5%8C%96"><span class="nav-number">4.5.</span> <span class="nav-text">Week 5: 生产化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E5%85%B3%E9%94%AE%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99"><span class="nav-number">5.</span> <span class="nav-text">五、关键设计原则</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-%E6%B8%90%E8%BF%9B%E5%BC%8F%E5%90%AF%E7%94%A8"><span class="nav-number">5.1.</span> <span class="nav-text">5.1 渐进式启用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-%E9%98%B2%E5%BE%A1%E6%80%A7%E7%BC%96%E7%A8%8B"><span class="nav-number">5.2.</span> <span class="nav-text">5.2 防御性编程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-%E5%8F%AF%E8%A7%82%E6%B5%8B%E6%80%A7%E4%BC%98%E5%85%88"><span class="nav-number">5.3.</span> <span class="nav-text">5.3 可观测性优先</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E8%AF%AD"><span class="nav-number">6.</span> <span class="nav-text">结语</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%BA%90"><span class="nav-number">7.</span> <span class="nav-text">参考资源</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -156,16 +163,17 @@
 
     </div>
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://sy123053917.github.io/persona-knowladge/2026/04/22/harness-engineering-practical-guide/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -179,13 +187,13 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | 个人博客">
+      <meta itemprop="name" content="Harness Engineering 实战：从零构建 AI Agent 的「缰绳与马鞍」 | 个人博客">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/persona-knowladge/2026/04/22/harness-engineering-practical-guide/" class="post-title-link" itemprop="url">Harness Engineering 实战：从零构建 AI Agent 的「缰绳与马鞍」</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          Harness Engineering 实战：从零构建 AI Agent 的「缰绳与马鞍」
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -221,8 +229,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
-          <blockquote>
+    <div class="post-body" itemprop="articleBody"><blockquote>
 <p>提示词已经不够用了！深度拆解 AI 下半场密码：Harness Engineering —— 给烈马配上缰绳、马鞍、跑道护栏和反馈镜子</p>
 </blockquote>
 <hr>
@@ -403,7 +410,6 @@
 </ul>
 <p><em>本文代码基于 MIT 协议，可自由使用</em></p>
 
-      
     </div>
 
     
@@ -411,681 +417,28 @@
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+          <div class="post-tags">
+              <a href="/persona-knowladge/tags/Harness-Engineering/" rel="tag"># Harness Engineering</a>
+              <a href="/persona-knowladge/tags/AI-Agent/" rel="tag"># AI Agent</a>
+              <a href="/persona-knowladge/tags/%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%B7%B5/" rel="tag"># 工程实践</a>
+              <a href="/persona-knowladge/tags/%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84/" rel="tag"># 系统架构</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/persona-knowladge/2026/04/22/build-harness-in-project/" rel="prev" title="如何在项目中构建 Harness：AI Agent 工程化实战指南">
+                  <i class="fa fa-angle-left"></i> 如何在项目中构建 Harness：AI Agent 工程化实战指南
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
     </footer>
   </article>
 </div>
 
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://sy123053917.github.io/persona-knowladge/2026/04/22/build-harness-in-project/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/persona-knowladge/images/avatar.gif">
-      <meta itemprop="name" content="博主">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="个人博客">
-      <meta itemprop="description" content="分享技术与生活">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | 个人博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/persona-knowladge/2026/04/22/build-harness-in-project/" class="post-title-link" itemprop="url">如何在项目中构建 Harness：AI Agent 工程化实战指南</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2026-04-22 10:40:00 / 修改时间：10:42:24" itemprop="dateCreated datePublished" datetime="2026-04-22T10:40:00+08:00">2026-04-22</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/persona-knowladge/categories/AI/" itemprop="url" rel="index"><span itemprop="name">AI</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/persona-knowladge/categories/AI/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <blockquote>
-<p>从「能用的 Agent」到「可靠的 Agent」—— 一份可落地的 Harness 构建指南</p>
-</blockquote>
-<hr>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在 AI Agent 开发中，我们经常遇到这样的困境：</p>
-<ul>
-<li>Agent 在本地测试时表现完美，上线后却频繁出错</li>
-<li>模型调用成本不可控，一不小心就烧光预算</li>
-<li>敏感操作没有审批，安全漏洞频出</li>
-<li>对话上下文管理混乱，Agent 很快「失忆」</li>
-</ul>
-<p>这些问题的根源不在于模型能力，而在于缺乏一个<strong>可靠的 Harness 层</strong>。</p>
-<p>本文将带你从零开始，在项目中构建一个生产级的 Harness 系统。</p>
-<hr>
-<h2 id="一、Harness-的核心组件"><a href="#一、Harness-的核心组件" class="headerlink" title="一、Harness 的核心组件"></a>一、Harness 的核心组件</h2><p>一个完整的 Harness 系统包含五大支柱：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">┌─────────────────────────────────────────────────────┐</span><br><span class="line">│                    Harness System                    │</span><br><span class="line">├─────────────┬─────────────┬─────────────────────────┤</span><br><span class="line">│   工具层    │   上下文    │      安全审批层         │</span><br><span class="line">│   (Tools)   │   管理层    │    (Approval Layer)     │</span><br><span class="line">├─────────────┴─────────────┴─────────────────────────┤</span><br><span class="line">│              会话管理 + 资源治理                       │</span><br><span class="line">└─────────────────────────────────────────────────────┘</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-1-工具层（Tools）"><a href="#1-1-工具层（Tools）" class="headerlink" title="1.1 工具层（Tools）"></a>1.1 工具层（Tools）</h3><p>工具是 Agent 与外部世界交互的接口。一个好的工具系统需要：</p>
-<ul>
-<li><strong>类型安全</strong>：每个工具都有明确的输入&#x2F;输出 schema</li>
-<li><strong>错误处理</strong>：工具执行失败时提供清晰的错误信息</li>
-<li><strong>超时控制</strong>：防止工具调用无限挂起</li>
-</ul>
-<p><strong>代码示例</strong>：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> dataclasses <span class="keyword">import</span> dataclass</span><br><span class="line"><span class="keyword">from</span> typing <span class="keyword">import</span> <span class="type">Any</span>, <span class="type">Optional</span></span><br><span class="line"><span class="keyword">from</span> enum <span class="keyword">import</span> Enum</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ToolResultStatus</span>(<span class="title class_ inherited__">Enum</span>):</span><br><span class="line">    SUCCESS = <span class="string">&quot;success&quot;</span></span><br><span class="line">    ERROR = <span class="string">&quot;error&quot;</span></span><br><span class="line">    TIMEOUT = <span class="string">&quot;timeout&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@dataclass</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ToolResult</span>:</span><br><span class="line">    status: ToolResultStatus</span><br><span class="line">    data: <span class="type">Any</span></span><br><span class="line">    error_message: <span class="type">Optional</span>[<span class="built_in">str</span>] = <span class="literal">None</span></span><br><span class="line">    execution_time_ms: <span class="built_in">int</span> = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Tool</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;工具基类&quot;&quot;&quot;</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, name: <span class="built_in">str</span>, description: <span class="built_in">str</span>, timeout_ms: <span class="built_in">int</span> = <span class="number">30000</span></span>):</span><br><span class="line">        <span class="variable language_">self</span>.name = name</span><br><span class="line">        <span class="variable language_">self</span>.description = description</span><br><span class="line">        <span class="variable language_">self</span>.timeout_ms = timeout_ms</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">execute</span>(<span class="params">self, **params</span>) -&gt; ToolResult:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;执行工具，子类必须实现&quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">raise</span> NotImplementedError</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">get_schema</span>(<span class="params">self</span>) -&gt; <span class="built_in">dict</span>:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;返回工具的 JSON Schema&quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            <span class="string">&quot;name&quot;</span>: <span class="variable language_">self</span>.name,</span><br><span class="line">            <span class="string">&quot;description&quot;</span>: <span class="variable language_">self</span>.description,</span><br><span class="line">            <span class="string">&quot;parameters&quot;</span>: <span class="variable language_">self</span>._get_parameters_schema()</span><br><span class="line">        &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">_get_parameters_schema</span>(<span class="params">self</span>) -&gt; <span class="built_in">dict</span>:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;子类实现参数 schema&quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">return</span> &#123;&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">FileReadTool</span>(<span class="title class_ inherited__">Tool</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;文件读取工具示例&quot;&quot;&quot;</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">super</span>().__init__(</span><br><span class="line">            name=<span class="string">&quot;file_read&quot;</span>,</span><br><span class="line">            description=<span class="string">&quot;读取文件内容&quot;</span>,</span><br><span class="line">            timeout_ms=<span class="number">5000</span></span><br><span class="line">        )</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">_get_parameters_schema</span>(<span class="params">self</span>) -&gt; <span class="built_in">dict</span>:</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            <span class="string">&quot;type&quot;</span>: <span class="string">&quot;object&quot;</span>,</span><br><span class="line">            <span class="string">&quot;properties&quot;</span>: &#123;</span><br><span class="line">                <span class="string">&quot;path&quot;</span>: &#123;</span><br><span class="line">                    <span class="string">&quot;type&quot;</span>: <span class="string">&quot;string&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;description&quot;</span>: <span class="string">&quot;文件路径&quot;</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="string">&quot;max_size&quot;</span>: &#123;</span><br><span class="line">                    <span class="string">&quot;type&quot;</span>: <span class="string">&quot;integer&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;description&quot;</span>: <span class="string">&quot;最大读取字节数&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;default&quot;</span>: <span class="number">100000</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="string">&quot;required&quot;</span>: [<span class="string">&quot;path&quot;</span>]</span><br><span class="line">        &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">execute</span>(<span class="params">self, path: <span class="built_in">str</span>, max_size: <span class="built_in">int</span> = <span class="number">100000</span></span>) -&gt; ToolResult:</span><br><span class="line">        <span class="keyword">import</span> asyncio</span><br><span class="line">        <span class="keyword">import</span> time</span><br><span class="line">        </span><br><span class="line">        start_time = time.time()</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            <span class="comment"># 模拟异步文件读取</span></span><br><span class="line">            content = <span class="keyword">await</span> asyncio.wait_for(</span><br><span class="line">                <span class="variable language_">self</span>._read_file(path, max_size),</span><br><span class="line">                timeout=<span class="variable language_">self</span>.timeout_ms / <span class="number">1000</span></span><br><span class="line">            )</span><br><span class="line">            </span><br><span class="line">            execution_time = <span class="built_in">int</span>((time.time() - start_time) * <span class="number">1000</span>)</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">return</span> ToolResult(</span><br><span class="line">                status=ToolResultStatus.SUCCESS,</span><br><span class="line">                data=&#123;<span class="string">&quot;content&quot;</span>: content, <span class="string">&quot;path&quot;</span>: path&#125;,</span><br><span class="line">                execution_time_ms=execution_time</span><br><span class="line">            )</span><br><span class="line">            </span><br><span class="line">        <span class="keyword">except</span> asyncio.TimeoutError:</span><br><span class="line">            <span class="keyword">return</span> ToolResult(</span><br><span class="line">                status=ToolResultStatus.TIMEOUT,</span><br><span class="line">                data=<span class="literal">None</span>,</span><br><span class="line">                error_message=<span class="string">f&quot;读取文件超时（&gt;<span class="subst">&#123;self.timeout_ms&#125;</span>ms）&quot;</span>,</span><br><span class="line">                execution_time_ms=<span class="variable language_">self</span>.timeout_ms</span><br><span class="line">            )</span><br><span class="line">        <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">            <span class="keyword">return</span> ToolResult(</span><br><span class="line">                status=ToolResultStatus.ERROR,</span><br><span class="line">                data=<span class="literal">None</span>,</span><br><span class="line">                error_message=<span class="built_in">str</span>(e),</span><br><span class="line">                execution_time_ms=<span class="built_in">int</span>((time.time() - start_time) * <span class="number">1000</span>)</span><br><span class="line">            )</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">_read_file</span>(<span class="params">self, path: <span class="built_in">str</span>, max_size: <span class="built_in">int</span></span>) -&gt; <span class="built_in">str</span>:</span><br><span class="line">        <span class="comment"># 实际实现...</span></span><br><span class="line">        <span class="keyword">await</span> asyncio.sleep(<span class="number">0.1</span>)  <span class="comment"># 模拟IO</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">f&quot;Content of <span class="subst">&#123;path&#125;</span>&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="1-2-上下文管理层"><a href="#1-2-上下文管理层" class="headerlink" title="1.2 上下文管理层"></a>1.2 上下文管理层</h3><p>上下文管理是 Harness 的核心。需要处理：</p>
-<ul>
-<li><strong>系统提示构建</strong>：动态注入项目信息、用户偏好</li>
-<li><strong>对话历史压缩</strong>：防止 token 超限</li>
-<li><strong>关键文件注入</strong>：自动读取相关文件内容</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ContextManager</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;上下文管理器&quot;&quot;&quot;</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, max_tokens: <span class="built_in">int</span> = <span class="number">128000</span></span>):</span><br><span class="line">        <span class="variable language_">self</span>.max_tokens = max_tokens</span><br><span class="line">        <span class="variable language_">self</span>.system_prompt_template = <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">You are an AI assistant helping with software development.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Project Context:</span></span><br><span class="line"><span class="string">&#123;project_context&#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">User Preferences:</span></span><br><span class="line"><span class="string">&#123;user_preferences&#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Available Tools:</span></span><br><span class="line"><span class="string">&#123;tools_description&#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Guidelines:</span></span><br><span class="line"><span class="string">1. Always check file content before making changes</span></span><br><span class="line"><span class="string">2. Run tests after modifications</span></span><br><span class="line"><span class="string">3. Ask for confirmation before destructive operations</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">build_system_prompt</span>(<span class="params"></span></span><br><span class="line"><span class="params">        self,</span></span><br><span class="line"><span class="params">        project_info: <span class="built_in">dict</span>,</span></span><br><span class="line"><span class="params">        user_prefs: <span class="built_in">dict</span>,</span></span><br><span class="line"><span class="params">        tools: <span class="built_in">list</span>[Tool]</span></span><br><span class="line"><span class="params">    </span>) -&gt; <span class="built_in">str</span>:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;构建系统提示&quot;&quot;&quot;</span></span><br><span class="line">        </span><br><span class="line">        project_context = <span class="variable language_">self</span>._format_project_info(project_info)</span><br><span class="line">        user_preferences = <span class="variable language_">self</span>._format_user_prefs(user_prefs)</span><br><span class="line">        tools_description = <span class="variable language_">self</span>._format_tools(tools)</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">self</span>.system_prompt_template.<span class="built_in">format</span>(</span><br><span class="line">            project_context=project_context,</span><br><span class="line">            user_preferences=user_preferences,</span><br><span class="line">            tools_description=tools_description</span><br><span class="line">        )</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">compress_conversation</span>(<span class="params"></span></span><br><span class="line"><span class="params">        self,</span></span><br><span class="line"><span class="params">        messages: <span class="built_in">list</span>[<span class="built_in">dict</span>],</span></span><br><span class="line"><span class="params">        max_messages: <span class="built_in">int</span> = <span class="number">50</span></span></span><br><span class="line"><span class="params">    </span>) -&gt; <span class="built_in">list</span>[<span class="built_in">dict</span>]:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;压缩对话历史&quot;&quot;&quot;</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(messages) &lt;= max_messages:</span><br><span class="line">            <span class="keyword">return</span> messages</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 保留开头（系统提示+初始几轮）和结尾（最近几轮）</span></span><br><span class="line">        head_count = <span class="number">10</span></span><br><span class="line">        tail_count = max_messages - head_count</span><br><span class="line">        </span><br><span class="line">        head = messages[:head_count]</span><br><span class="line">        tail = messages[-tail_count:]</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 中间部分用摘要替代</span></span><br><span class="line">        middle_summary = <span class="variable language_">self</span>._summarize_messages(</span><br><span class="line">            messages[head_count:-tail_count]</span><br><span class="line">        )</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> head + [&#123;<span class="string">&quot;role&quot;</span>: <span class="string">&quot;system&quot;</span>, <span class="string">&quot;content&quot;</span>: middle_summary&#125;] + tail</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">_format_project_info</span>(<span class="params">self, info: <span class="built_in">dict</span></span>) -&gt; <span class="built_in">str</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">f&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">- Project: <span class="subst">&#123;info.get(<span class="string">&#x27;name&#x27;</span>, <span class="string">&#x27;Unknown&#x27;</span>)&#125;</span></span></span><br><span class="line"><span class="string">- Language: <span class="subst">&#123;info.get(<span class="string">&#x27;language&#x27;</span>, <span class="string">&#x27;Unknown&#x27;</span>)&#125;</span></span></span><br><span class="line"><span class="string">- Structure: <span class="subst">&#123;info.get(<span class="string">&#x27;structure&#x27;</span>, <span class="string">&#x27;Unknown&#x27;</span>)&#125;</span></span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">_format_user_prefs</span>(<span class="params">self, prefs: <span class="built_in">dict</span></span>) -&gt; <span class="built_in">str</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;\n&quot;</span>.join([</span><br><span class="line">            <span class="string">f&quot;- <span class="subst">&#123;k&#125;</span>: <span class="subst">&#123;v&#125;</span>&quot;</span> <span class="keyword">for</span> k, v <span class="keyword">in</span> prefs.items()</span><br><span class="line">        ])</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">_format_tools</span>(<span class="params">self, tools: <span class="built_in">list</span>[Tool]</span>) -&gt; <span class="built_in">str</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;\n&quot;</span>.join([</span><br><span class="line">            <span class="string">f&quot;- <span class="subst">&#123;tool.name&#125;</span>: <span class="subst">&#123;tool.description&#125;</span>&quot;</span></span><br><span class="line">            <span class="keyword">for</span> tool <span class="keyword">in</span> tools</span><br><span class="line">        ])</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">_summarize_messages</span>(<span class="params">self, messages: <span class="built_in">list</span>[<span class="built_in">dict</span>]</span>) -&gt; <span class="built_in">str</span>:</span><br><span class="line">        <span class="comment"># 实际应用中调用 LLM 进行摘要</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">f&quot;[Summary of <span class="subst">&#123;<span class="built_in">len</span>(messages)&#125;</span> messages...]&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="1-3-安全审批层"><a href="#1-3-安全审批层" class="headerlink" title="1.3 安全审批层"></a>1.3 安全审批层</h3><p>这是 Harness 的安全闸门。所有危险操作都需要用户确认。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> enum <span class="keyword">import</span> Enum</span><br><span class="line"><span class="keyword">from</span> typing <span class="keyword">import</span> <span class="type">Callable</span>, <span class="type">Optional</span></span><br><span class="line"><span class="keyword">import</span> asyncio</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ApprovalMode</span>(<span class="title class_ inherited__">Enum</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;审批模式&quot;&quot;&quot;</span></span><br><span class="line">    AUTO = <span class="string">&quot;auto&quot;</span>           <span class="comment"># 自动执行（仅非危险操作）</span></span><br><span class="line">    SMART = <span class="string">&quot;smart&quot;</span>         <span class="comment"># 智能审批（基于风险评分）</span></span><br><span class="line">    MANUAL = <span class="string">&quot;manual&quot;</span>       <span class="comment"># 全部手动审批</span></span><br><span class="line">    OFF = <span class="string">&quot;off&quot;</span>             <span class="comment"># 关闭审批（仅开发环境）</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">RiskLevel</span>(<span class="title class_ inherited__">Enum</span>):</span><br><span class="line">    LOW = <span class="number">1</span></span><br><span class="line">    MEDIUM = <span class="number">2</span></span><br><span class="line">    HIGH = <span class="number">3</span></span><br><span class="line">    CRITICAL = <span class="number">4</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ApprovalManager</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;审批管理器&quot;&quot;&quot;</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 危险操作关键词</span></span><br><span class="line">    DANGEROUS_PATTERNS = [</span><br><span class="line">        (<span class="string">&quot;rm -rf&quot;</span>, RiskLevel.CRITICAL),</span><br><span class="line">        (<span class="string">&quot;DROP TABLE&quot;</span>, RiskLevel.CRITICAL),</span><br><span class="line">        (<span class="string">&quot;DELETE FROM&quot;</span>, RiskLevel.HIGH),</span><br><span class="line">        (<span class="string">&quot;curl.*|.*sh&quot;</span>, RiskLevel.HIGH),</span><br><span class="line">        (<span class="string">&quot;eval(&quot;</span>, RiskLevel.HIGH),</span><br><span class="line">        (<span class="string">&quot;exec(&quot;</span>, RiskLevel.HIGH),</span><br><span class="line">    ]</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params"></span></span><br><span class="line"><span class="params">        self,</span></span><br><span class="line"><span class="params">        mode: ApprovalMode = ApprovalMode.SMART,</span></span><br><span class="line"><span class="params">        timeout_seconds: <span class="built_in">int</span> = <span class="number">60</span></span></span><br><span class="line"><span class="params">    </span>):</span><br><span class="line">        <span class="variable language_">self</span>.mode = mode</span><br><span class="line">        <span class="variable language_">self</span>.timeout_seconds = timeout_seconds</span><br><span class="line">        <span class="variable language_">self</span>.approval_callback: <span class="type">Optional</span>[<span class="type">Callable</span>] = <span class="literal">None</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">set_approval_callback</span>(<span class="params">self, callback: <span class="type">Callable</span></span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;设置审批回调函数&quot;&quot;&quot;</span></span><br><span class="line">        <span class="variable language_">self</span>.approval_callback = callback</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">check_approval</span>(<span class="params"></span></span><br><span class="line"><span class="params">        self,</span></span><br><span class="line"><span class="params">        tool_name: <span class="built_in">str</span>,</span></span><br><span class="line"><span class="params">        params: <span class="built_in">dict</span>,</span></span><br><span class="line"><span class="params">        tool_description: <span class="built_in">str</span> = <span class="string">&quot;&quot;</span></span></span><br><span class="line"><span class="params">    </span>) -&gt; <span class="built_in">bool</span>:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        检查操作是否需要审批</span></span><br><span class="line"><span class="string">        返回 True 表示可以继续执行</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> <span class="variable language_">self</span>.mode == ApprovalMode.OFF:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 评估风险等级</span></span><br><span class="line">        risk_level = <span class="variable language_">self</span>._assess_risk(tool_name, params, tool_description)</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> <span class="variable language_">self</span>.mode == ApprovalMode.AUTO:</span><br><span class="line">            <span class="comment"># 仅允许低风险操作</span></span><br><span class="line">            <span class="keyword">return</span> risk_level == RiskLevel.LOW</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> <span class="variable language_">self</span>.mode == ApprovalMode.SMART:</span><br><span class="line">            <span class="comment"># 中等风险以下自动通过</span></span><br><span class="line">            <span class="keyword">if</span> risk_level <span class="keyword">in</span> [RiskLevel.LOW, RiskLevel.MEDIUM]:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 需要人工审批</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">await</span> <span class="variable language_">self</span>._request_approval(</span><br><span class="line">            tool_name, params, tool_description, risk_level</span><br><span class="line">        )</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">_assess_risk</span>(<span class="params"></span></span><br><span class="line"><span class="params">        self,</span></span><br><span class="line"><span class="params">        tool_name: <span class="built_in">str</span>,</span></span><br><span class="line"><span class="params">        params: <span class="built_in">dict</span>,</span></span><br><span class="line"><span class="params">        description: <span class="built_in">str</span></span></span><br><span class="line"><span class="params">    </span>) -&gt; RiskLevel:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;评估操作风险等级&quot;&quot;&quot;</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 将参数转为字符串用于模式匹配</span></span><br><span class="line">        params_str = <span class="built_in">str</span>(params).lower()</span><br><span class="line">        full_text = <span class="string">f&quot;<span class="subst">&#123;tool_name&#125;</span> <span class="subst">&#123;params_str&#125;</span> <span class="subst">&#123;description&#125;</span>&quot;</span>.lower()</span><br><span class="line">        </span><br><span class="line">        max_risk = RiskLevel.LOW</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> pattern, risk <span class="keyword">in</span> <span class="variable language_">self</span>.DANGEROUS_PATTERNS:</span><br><span class="line">            <span class="keyword">import</span> re</span><br><span class="line">            <span class="keyword">if</span> re.search(pattern, full_text):</span><br><span class="line">                max_risk = <span class="built_in">max</span>(max_risk, risk)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 文件操作风险评估</span></span><br><span class="line">        <span class="keyword">if</span> tool_name <span class="keyword">in</span> [<span class="string">&quot;file_write&quot;</span>, <span class="string">&quot;file_delete&quot;</span>]:</span><br><span class="line">            path = params.get(<span class="string">&quot;path&quot;</span>, <span class="string">&quot;&quot;</span>)</span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">any</span>(dangerous <span class="keyword">in</span> path <span class="keyword">for</span> dangerous <span class="keyword">in</span> [<span class="string">&quot;/etc&quot;</span>, <span class="string">&quot;/usr&quot;</span>, <span class="string">&quot;/bin&quot;</span>]):</span><br><span class="line">                max_risk = <span class="built_in">max</span>(max_risk, RiskLevel.HIGH)</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> max_risk</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">_request_approval</span>(<span class="params"></span></span><br><span class="line"><span class="params">        self,</span></span><br><span class="line"><span class="params">        tool_name: <span class="built_in">str</span>,</span></span><br><span class="line"><span class="params">        params: <span class="built_in">dict</span>,</span></span><br><span class="line"><span class="params">        description: <span class="built_in">str</span>,</span></span><br><span class="line"><span class="params">        risk_level: RiskLevel</span></span><br><span class="line"><span class="params">    </span>) -&gt; <span class="built_in">bool</span>:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;请求用户审批&quot;&quot;&quot;</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> <span class="variable language_">self</span>.approval_callback:</span><br><span class="line">            <span class="keyword">raise</span> RuntimeError(<span class="string">&quot;Approval callback not set&quot;</span>)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 构建审批提示</span></span><br><span class="line">        prompt = <span class="string">f&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">⚠️ **需要您的确认**</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">操作: <span class="subst">&#123;tool_name&#125;</span></span></span><br><span class="line"><span class="string">风险等级: <span class="subst">&#123;risk_level.name&#125;</span></span></span><br><span class="line"><span class="string">描述: <span class="subst">&#123;description&#125;</span></span></span><br><span class="line"><span class="string">参数: <span class="subst">&#123;params&#125;</span></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">是否允许执行？(yes/no/always)</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            result = <span class="keyword">await</span> asyncio.wait_for(</span><br><span class="line">                <span class="variable language_">self</span>.approval_callback(prompt),</span><br><span class="line">                timeout=<span class="variable language_">self</span>.timeout_seconds</span><br><span class="line">            )</span><br><span class="line">            <span class="keyword">return</span> result <span class="keyword">in</span> [<span class="string">&quot;yes&quot;</span>, <span class="string">&quot;always&quot;</span>, <span class="string">&quot;y&quot;</span>]</span><br><span class="line">        <span class="keyword">except</span> asyncio.TimeoutError:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;审批超时，操作已取消&quot;</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="1-4-会话管理系统"><a href="#1-4-会话管理系统" class="headerlink" title="1.4 会话管理系统"></a>1.4 会话管理系统</h3><p>支持任务中断、恢复和持久化。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> uuid</span><br><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime</span><br><span class="line"><span class="keyword">from</span> pathlib <span class="keyword">import</span> Path</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Session</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;会话对象&quot;&quot;&quot;</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, session_id: <span class="type">Optional</span>[<span class="built_in">str</span>] = <span class="literal">None</span></span>):</span><br><span class="line">        <span class="variable language_">self</span>.session_id = session_id <span class="keyword">or</span> <span class="built_in">str</span>(uuid.uuid4())</span><br><span class="line">        <span class="variable language_">self</span>.created_at = datetime.now()</span><br><span class="line">        <span class="variable language_">self</span>.updated_at = datetime.now()</span><br><span class="line">        <span class="variable language_">self</span>.messages: <span class="built_in">list</span>[<span class="built_in">dict</span>] = []</span><br><span class="line">        <span class="variable language_">self</span>.state: <span class="built_in">dict</span> = &#123;&#125;</span><br><span class="line">        <span class="variable language_">self</span>.metadata: <span class="built_in">dict</span> = &#123;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">add_message</span>(<span class="params">self, role: <span class="built_in">str</span>, content: <span class="built_in">str</span>, metadata: <span class="built_in">dict</span> = <span class="literal">None</span></span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;添加消息&quot;&quot;&quot;</span></span><br><span class="line">        <span class="variable language_">self</span>.messages.append(&#123;</span><br><span class="line">            <span class="string">&quot;role&quot;</span>: role,</span><br><span class="line">            <span class="string">&quot;content&quot;</span>: content,</span><br><span class="line">            <span class="string">&quot;timestamp&quot;</span>: datetime.now().isoformat(),</span><br><span class="line">            <span class="string">&quot;metadata&quot;</span>: metadata <span class="keyword">or</span> &#123;&#125;</span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="variable language_">self</span>.updated_at = datetime.now()</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">to_dict</span>(<span class="params">self</span>) -&gt; <span class="built_in">dict</span>:</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            <span class="string">&quot;session_id&quot;</span>: <span class="variable language_">self</span>.session_id,</span><br><span class="line">            <span class="string">&quot;created_at&quot;</span>: <span class="variable language_">self</span>.created_at.isoformat(),</span><br><span class="line">            <span class="string">&quot;updated_at&quot;</span>: <span class="variable language_">self</span>.updated_at.isoformat(),</span><br><span class="line">            <span class="string">&quot;messages&quot;</span>: <span class="variable language_">self</span>.messages,</span><br><span class="line">            <span class="string">&quot;state&quot;</span>: <span class="variable language_">self</span>.state,</span><br><span class="line">            <span class="string">&quot;metadata&quot;</span>: <span class="variable language_">self</span>.metadata</span><br><span class="line">        &#125;</span><br><span class="line">    </span><br><span class="line"><span class="meta">    @classmethod</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">from_dict</span>(<span class="params">cls, data: <span class="built_in">dict</span></span>) -&gt; <span class="string">&quot;Session&quot;</span>:</span><br><span class="line">        session = cls(data[<span class="string">&quot;session_id&quot;</span>])</span><br><span class="line">        session.created_at = datetime.fromisoformat(data[<span class="string">&quot;created_at&quot;</span>])</span><br><span class="line">        session.updated_at = datetime.fromisoformat(data[<span class="string">&quot;updated_at&quot;</span>])</span><br><span class="line">        session.messages = data[<span class="string">&quot;messages&quot;</span>]</span><br><span class="line">        session.state = data[<span class="string">&quot;state&quot;</span>]</span><br><span class="line">        session.metadata = data[<span class="string">&quot;metadata&quot;</span>]</span><br><span class="line">        <span class="keyword">return</span> session</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">SessionManager</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;会话管理器&quot;&quot;&quot;</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, storage_path: <span class="built_in">str</span> = <span class="string">&quot;./sessions&quot;</span></span>):</span><br><span class="line">        <span class="variable language_">self</span>.storage_path = Path(storage_path)</span><br><span class="line">        <span class="variable language_">self</span>.storage_path.mkdir(exist_ok=<span class="literal">True</span>)</span><br><span class="line">        <span class="variable language_">self</span>.active_sessions: <span class="built_in">dict</span>[<span class="built_in">str</span>, Session] = &#123;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">create_session</span>(<span class="params">self</span>) -&gt; Session:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;创建新会话&quot;&quot;&quot;</span></span><br><span class="line">        session = Session()</span><br><span class="line">        <span class="variable language_">self</span>.active_sessions[session.session_id] = session</span><br><span class="line">        <span class="keyword">return</span> session</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">get_session</span>(<span class="params">self, session_id: <span class="built_in">str</span></span>) -&gt; <span class="type">Optional</span>[Session]:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;获取会话&quot;&quot;&quot;</span></span><br><span class="line">        <span class="comment"># 先检查活跃会话</span></span><br><span class="line">        <span class="keyword">if</span> session_id <span class="keyword">in</span> <span class="variable language_">self</span>.active_sessions:</span><br><span class="line">            <span class="keyword">return</span> <span class="variable language_">self</span>.active_sessions[session_id]</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 尝试从磁盘加载</span></span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">self</span>._load_session(session_id)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">save_session</span>(<span class="params">self, session_id: <span class="built_in">str</span></span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;保存会话到磁盘&quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">if</span> session_id <span class="keyword">not</span> <span class="keyword">in</span> <span class="variable language_">self</span>.active_sessions:</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        </span><br><span class="line">        session = <span class="variable language_">self</span>.active_sessions[session_id]</span><br><span class="line">        file_path = <span class="variable language_">self</span>.storage_path / <span class="string">f&quot;<span class="subst">&#123;session_id&#125;</span>.json&quot;</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(file_path, <span class="string">&quot;w&quot;</span>, encoding=<span class="string">&quot;utf-8&quot;</span>) <span class="keyword">as</span> f:</span><br><span class="line">            json.dump(session.to_dict(), f, ensure_ascii=<span class="literal">False</span>, indent=<span class="number">2</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">_load_session</span>(<span class="params">self, session_id: <span class="built_in">str</span></span>) -&gt; <span class="type">Optional</span>[Session]:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;从磁盘加载会话&quot;&quot;&quot;</span></span><br><span class="line">        file_path = <span class="variable language_">self</span>.storage_path / <span class="string">f&quot;<span class="subst">&#123;session_id&#125;</span>.json&quot;</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> file_path.exists():</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(file_path, <span class="string">&quot;r&quot;</span>, encoding=<span class="string">&quot;utf-8&quot;</span>) <span class="keyword">as</span> f:</span><br><span class="line">            data = json.load(f)</span><br><span class="line">            session = Session.from_dict(data)</span><br><span class="line">            <span class="variable language_">self</span>.active_sessions[session_id] = session</span><br><span class="line">            <span class="keyword">return</span> session</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">list_sessions</span>(<span class="params">self</span>) -&gt; <span class="built_in">list</span>[<span class="built_in">dict</span>]:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;列出所有会话&quot;&quot;&quot;</span></span><br><span class="line">        sessions = []</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> file_path <span class="keyword">in</span> <span class="variable language_">self</span>.storage_path.glob(<span class="string">&quot;*.json&quot;</span>):</span><br><span class="line">            <span class="keyword">with</span> <span class="built_in">open</span>(file_path, <span class="string">&quot;r&quot;</span>, encoding=<span class="string">&quot;utf-8&quot;</span>) <span class="keyword">as</span> f:</span><br><span class="line">                data = json.load(f)</span><br><span class="line">                sessions.append(&#123;</span><br><span class="line">                    <span class="string">&quot;session_id&quot;</span>: data[<span class="string">&quot;session_id&quot;</span>],</span><br><span class="line">                    <span class="string">&quot;created_at&quot;</span>: data[<span class="string">&quot;created_at&quot;</span>],</span><br><span class="line">                    <span class="string">&quot;updated_at&quot;</span>: data[<span class="string">&quot;updated_at&quot;</span>],</span><br><span class="line">                    <span class="string">&quot;message_count&quot;</span>: <span class="built_in">len</span>(data[<span class="string">&quot;messages&quot;</span>])</span><br><span class="line">                &#125;)</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">sorted</span>(sessions, key=<span class="keyword">lambda</span> x: x[<span class="string">&quot;updated_at&quot;</span>], reverse=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-5-资源治理层"><a href="#1-5-资源治理层" class="headerlink" title="1.5 资源治理层"></a>1.5 资源治理层</h3><p>控制成本和防止滥用。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ResourceGovernor</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;资源治理器&quot;&quot;&quot;</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params"></span></span><br><span class="line"><span class="params">        self,</span></span><br><span class="line"><span class="params">        max_tokens_per_session: <span class="built_in">int</span> = <span class="number">500000</span>,</span></span><br><span class="line"><span class="params">        max_tools_per_minute: <span class="built_in">int</span> = <span class="number">30</span>,</span></span><br><span class="line"><span class="params">        max_cost_per_session: <span class="built_in">float</span> = <span class="number">10.0</span>  <span class="comment"># USD</span></span></span><br><span class="line"><span class="params">    </span>):</span><br><span class="line">        <span class="variable language_">self</span>.max_tokens = max_tokens_per_session</span><br><span class="line">        <span class="variable language_">self</span>.max_tools_per_minute = max_tools_per_minute</span><br><span class="line">        <span class="variable language_">self</span>.max_cost = max_cost_per_session</span><br><span class="line">        </span><br><span class="line">        <span class="variable language_">self</span>.token_usage = <span class="number">0</span></span><br><span class="line">        <span class="variable language_">self</span>.tool_calls = []</span><br><span class="line">        <span class="variable language_">self</span>.estimated_cost = <span class="number">0.0</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">record_token_usage</span>(<span class="params">self, tokens: <span class="built_in">int</span></span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;记录 token 使用&quot;&quot;&quot;</span></span><br><span class="line">        <span class="variable language_">self</span>.token_usage += tokens</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> <span class="variable language_">self</span>.token_usage &gt; <span class="variable language_">self</span>.max_tokens * <span class="number">0.8</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;⚠️ Token 使用超过 80%: <span class="subst">&#123;self.token_usage&#125;</span>/<span class="subst">&#123;self.max_tokens&#125;</span>&quot;</span>)</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> <span class="variable language_">self</span>.token_usage &gt; <span class="variable language_">self</span>.max_tokens:</span><br><span class="line">            <span class="keyword">raise</span> ResourceExhaustedError(</span><br><span class="line">                <span class="string">f&quot;Token 使用超限: <span class="subst">&#123;self.token_usage&#125;</span>/<span class="subst">&#123;self.max_tokens&#125;</span>&quot;</span></span><br><span class="line">            )</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">record_tool_call</span>(<span class="params">self, tool_name: <span class="built_in">str</span></span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;记录工具调用&quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">from</span> datetime <span class="keyword">import</span> datetime</span><br><span class="line">        </span><br><span class="line">        now = datetime.now()</span><br><span class="line">        <span class="variable language_">self</span>.tool_calls.append(&#123;<span class="string">&quot;tool&quot;</span>: tool_name, <span class="string">&quot;time&quot;</span>: now&#125;)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 清理1分钟前的记录</span></span><br><span class="line">        <span class="variable language_">self</span>.tool_calls = [</span><br><span class="line">            call <span class="keyword">for</span> call <span class="keyword">in</span> <span class="variable language_">self</span>.tool_calls</span><br><span class="line">            <span class="keyword">if</span> (now - call[<span class="string">&quot;time&quot;</span>]).seconds &lt; <span class="number">60</span></span><br><span class="line">        ]</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(<span class="variable language_">self</span>.tool_calls) &gt; <span class="variable language_">self</span>.max_tools_per_minute:</span><br><span class="line">            <span class="keyword">raise</span> RateLimitError(</span><br><span class="line">                <span class="string">f&quot;工具调用频率超限: <span class="subst">&#123;<span class="built_in">len</span>(self.tool_calls)&#125;</span>/<span class="subst">&#123;self.max_tools_per_minute&#125;</span> per minute&quot;</span></span><br><span class="line">            )</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">estimate_cost</span>(<span class="params">self, model: <span class="built_in">str</span>, tokens: <span class="built_in">int</span></span>) -&gt; <span class="built_in">float</span>:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;估算成本&quot;&quot;&quot;</span></span><br><span class="line">        <span class="comment"># 简化的成本估算</span></span><br><span class="line">        rates = &#123;</span><br><span class="line">            <span class="string">&quot;gpt-4&quot;</span>: <span class="number">0.03</span>,           <span class="comment"># per 1K tokens</span></span><br><span class="line">            <span class="string">&quot;gpt-3.5-turbo&quot;</span>: <span class="number">0.002</span>,</span><br><span class="line">            <span class="string">&quot;claude-3-opus&quot;</span>: <span class="number">0.015</span>,</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        rate = rates.get(model, <span class="number">0.01</span>)</span><br><span class="line">        cost = (tokens / <span class="number">1000</span>) * rate</span><br><span class="line">        </span><br><span class="line">        <span class="variable language_">self</span>.estimated_cost += cost</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> <span class="variable language_">self</span>.estimated_cost &gt; <span class="variable language_">self</span>.max_cost * <span class="number">0.8</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;⚠️ 预估成本超过 80%: $<span class="subst">&#123;self.estimated_cost:<span class="number">.2</span>f&#125;</span>/$<span class="subst">&#123;self.max_cost:<span class="number">.2</span>f&#125;</span>&quot;</span>)</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> cost</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">get_usage_report</span>(<span class="params">self</span>) -&gt; <span class="built_in">dict</span>:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;获取使用报告&quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            <span class="string">&quot;token_usage&quot;</span>: <span class="variable language_">self</span>.token_usage,</span><br><span class="line">            <span class="string">&quot;token_limit&quot;</span>: <span class="variable language_">self</span>.max_tokens,</span><br><span class="line">            <span class="string">&quot;token_percentage&quot;</span>: <span class="variable language_">self</span>.token_usage / <span class="variable language_">self</span>.max_tokens * <span class="number">100</span>,</span><br><span class="line">            <span class="string">&quot;tool_calls_last_minute&quot;</span>: <span class="built_in">len</span>(<span class="variable language_">self</span>.tool_calls),</span><br><span class="line">            <span class="string">&quot;estimated_cost&quot;</span>: <span class="variable language_">self</span>.estimated_cost,</span><br><span class="line">            <span class="string">&quot;cost_limit&quot;</span>: <span class="variable language_">self</span>.max_cost,</span><br><span class="line">            <span class="string">&quot;cost_percentage&quot;</span>: <span class="variable language_">self</span>.estimated_cost / <span class="variable language_">self</span>.max_cost * <span class="number">100</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ResourceExhaustedError</span>(<span class="title class_ inherited__">Exception</span>):</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">RateLimitError</span>(<span class="title class_ inherited__">Exception</span>):</span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="二、整合：构建完整的-Harness"><a href="#二、整合：构建完整的-Harness" class="headerlink" title="二、整合：构建完整的 Harness"></a>二、整合：构建完整的 Harness</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Harness</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;Harness 主类&quot;&quot;&quot;</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, config: <span class="built_in">dict</span> = <span class="literal">None</span></span>):</span><br><span class="line">        <span class="variable language_">self</span>.config = config <span class="keyword">or</span> &#123;&#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 初始化各组件</span></span><br><span class="line">        <span class="variable language_">self</span>.tools: <span class="built_in">dict</span>[<span class="built_in">str</span>, Tool] = &#123;&#125;</span><br><span class="line">        <span class="variable language_">self</span>.context_manager = ContextManager()</span><br><span class="line">        <span class="variable language_">self</span>.approval_manager = ApprovalManager(</span><br><span class="line">            mode=ApprovalMode.SMART</span><br><span class="line">        )</span><br><span class="line">        <span class="variable language_">self</span>.session_manager = SessionManager()</span><br><span class="line">        <span class="variable language_">self</span>.resource_governor = ResourceGovernor()</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 注册默认工具</span></span><br><span class="line">        <span class="variable language_">self</span>._register_default_tools()</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">_register_default_tools</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;注册默认工具&quot;&quot;&quot;</span></span><br><span class="line">        <span class="variable language_">self</span>.register_tool(FileReadTool())</span><br><span class="line">        <span class="comment"># 注册更多工具...</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">register_tool</span>(<span class="params">self, tool: Tool</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;注册工具&quot;&quot;&quot;</span></span><br><span class="line">        <span class="variable language_">self</span>.tools[tool.name] = tool</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">execute</span>(<span class="params"></span></span><br><span class="line"><span class="params">        self,</span></span><br><span class="line"><span class="params">        session_id: <span class="built_in">str</span>,</span></span><br><span class="line"><span class="params">        user_input: <span class="built_in">str</span>,</span></span><br><span class="line"><span class="params">        project_info: <span class="built_in">dict</span> = <span class="literal">None</span></span></span><br><span class="line"><span class="params">    </span>) -&gt; <span class="built_in">str</span>:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        执行用户请求</span></span><br><span class="line"><span class="string">        </span></span><br><span class="line"><span class="string">        完整流程：</span></span><br><span class="line"><span class="string">        1. 获取或创建会话</span></span><br><span class="line"><span class="string">        2. 构建上下文</span></span><br><span class="line"><span class="string">        3. 调用 LLM</span></span><br><span class="line"><span class="string">        4. 解析工具调用</span></span><br><span class="line"><span class="string">        5. 安全审批</span></span><br><span class="line"><span class="string">        6. 执行工具</span></span><br><span class="line"><span class="string">        7. 返回结果</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 1. 获取会话</span></span><br><span class="line">        session = <span class="variable language_">self</span>.session_manager.get_session(session_id)</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> session:</span><br><span class="line">            session = <span class="variable language_">self</span>.session_manager.create_session()</span><br><span class="line">            session_id = session.session_id</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 2. 记录用户输入</span></span><br><span class="line">        session.add_message(<span class="string">&quot;user&quot;</span>, user_input)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 3. 构建系统提示</span></span><br><span class="line">        system_prompt = <span class="variable language_">self</span>.context_manager.build_system_prompt(</span><br><span class="line">            project_info=project_info <span class="keyword">or</span> &#123;&#125;,</span><br><span class="line">            user_prefs=<span class="variable language_">self</span>._load_user_prefs(),</span><br><span class="line">            tools=<span class="built_in">list</span>(<span class="variable language_">self</span>.tools.values())</span><br><span class="line">        )</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 4. 准备消息列表</span></span><br><span class="line">        messages = [&#123;<span class="string">&quot;role&quot;</span>: <span class="string">&quot;system&quot;</span>, <span class="string">&quot;content&quot;</span>: system_prompt&#125;]</span><br><span class="line">        messages.extend(session.messages)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 5. 压缩上下文</span></span><br><span class="line">        messages = <span class="variable language_">self</span>.context_manager.compress_conversation(messages)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 6. 调用 LLM（简化示例）</span></span><br><span class="line">        llm_response = <span class="keyword">await</span> <span class="variable language_">self</span>._call_llm(messages)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 7. 处理工具调用</span></span><br><span class="line">        <span class="keyword">if</span> <span class="variable language_">self</span>._has_tool_calls(llm_response):</span><br><span class="line">            tool_results = <span class="keyword">await</span> <span class="variable language_">self</span>._execute_tool_calls(</span><br><span class="line">                llm_response[<span class="string">&quot;tool_calls&quot;</span>],</span><br><span class="line">                session</span><br><span class="line">            )</span><br><span class="line">            </span><br><span class="line">            <span class="comment"># 构建最终响应</span></span><br><span class="line">            final_response = <span class="keyword">await</span> <span class="variable language_">self</span>._generate_final_response(</span><br><span class="line">                messages, tool_results</span><br><span class="line">            )</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            final_response = llm_response[<span class="string">&quot;content&quot;</span>]</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 8. 记录助手响应</span></span><br><span class="line">        session.add_message(<span class="string">&quot;assistant&quot;</span>, final_response)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 9. 保存会话</span></span><br><span class="line">        <span class="variable language_">self</span>.session_manager.save_session(session_id)</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> final_response</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">_execute_tool_calls</span>(<span class="params"></span></span><br><span class="line"><span class="params">        self,</span></span><br><span class="line"><span class="params">        tool_calls: <span class="built_in">list</span>[<span class="built_in">dict</span>],</span></span><br><span class="line"><span class="params">        session: Session</span></span><br><span class="line"><span class="params">    </span>) -&gt; <span class="built_in">list</span>[<span class="built_in">dict</span>]:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;执行工具调用&quot;&quot;&quot;</span></span><br><span class="line">        results = []</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> call <span class="keyword">in</span> tool_calls:</span><br><span class="line">            tool_name = call[<span class="string">&quot;function&quot;</span>][<span class="string">&quot;name&quot;</span>]</span><br><span class="line">            params = json.loads(call[<span class="string">&quot;function&quot;</span>][<span class="string">&quot;arguments&quot;</span>])</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> tool_name <span class="keyword">not</span> <span class="keyword">in</span> <span class="variable language_">self</span>.tools:</span><br><span class="line">                results.append(&#123;</span><br><span class="line">                    <span class="string">&quot;tool&quot;</span>: tool_name,</span><br><span class="line">                    <span class="string">&quot;error&quot;</span>: <span class="string">f&quot;Unknown tool: <span class="subst">&#123;tool_name&#125;</span>&quot;</span></span><br><span class="line">                &#125;)</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            </span><br><span class="line">            tool = <span class="variable language_">self</span>.tools[tool_name]</span><br><span class="line">            </span><br><span class="line">            <span class="comment"># 安全审批</span></span><br><span class="line">            approved = <span class="keyword">await</span> <span class="variable language_">self</span>.approval_manager.check_approval(</span><br><span class="line">                tool_name, params, tool.description</span><br><span class="line">            )</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> approved:</span><br><span class="line">                results.append(&#123;</span><br><span class="line">                    <span class="string">&quot;tool&quot;</span>: tool_name,</span><br><span class="line">                    <span class="string">&quot;error&quot;</span>: <span class="string">&quot;Operation not approved by user&quot;</span></span><br><span class="line">                &#125;)</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            </span><br><span class="line">            <span class="comment"># 资源治理检查</span></span><br><span class="line">            <span class="variable language_">self</span>.resource_governor.record_tool_call(tool_name)</span><br><span class="line">            </span><br><span class="line">            <span class="comment"># 执行工具</span></span><br><span class="line">            <span class="keyword">try</span>:</span><br><span class="line">                tool_result = <span class="keyword">await</span> tool.execute(**params)</span><br><span class="line">                results.append(&#123;</span><br><span class="line">                    <span class="string">&quot;tool&quot;</span>: tool_name,</span><br><span class="line">                    <span class="string">&quot;result&quot;</span>: tool_result</span><br><span class="line">                &#125;)</span><br><span class="line">            <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">                results.append(&#123;</span><br><span class="line">                    <span class="string">&quot;tool&quot;</span>: tool_name,</span><br><span class="line">                    <span class="string">&quot;error&quot;</span>: <span class="built_in">str</span>(e)</span><br><span class="line">                &#125;)</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> results</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">get_usage_report</span>(<span class="params">self</span>) -&gt; <span class="built_in">dict</span>:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;获取资源使用报告&quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">self</span>.resource_governor.get_usage_report()</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">_load_user_prefs</span>(<span class="params">self</span>) -&gt; <span class="built_in">dict</span>:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;加载用户偏好&quot;&quot;&quot;</span></span><br><span class="line">        <span class="comment"># 从配置文件或数据库加载</span></span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            <span class="string">&quot;code_style&quot;</span>: <span class="string">&quot;pep8&quot;</span>,</span><br><span class="line">            <span class="string">&quot;test_framework&quot;</span>: <span class="string">&quot;pytest&quot;</span>,</span><br><span class="line">            <span class="string">&quot;doc_format&quot;</span>: <span class="string">&quot;google&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">_call_llm</span>(<span class="params">self, messages: <span class="built_in">list</span>[<span class="built_in">dict</span>]</span>) -&gt; <span class="built_in">dict</span>:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;调用 LLM（简化示例）&quot;&quot;&quot;</span></span><br><span class="line">        <span class="comment"># 实际实现中调用 OpenAI/Anthropic API</span></span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            <span class="string">&quot;content&quot;</span>: <span class="string">&quot;I&#x27;ll help you with that task.&quot;</span>,</span><br><span class="line">            <span class="string">&quot;tool_calls&quot;</span>: []</span><br><span class="line">        &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">_has_tool_calls</span>(<span class="params">self, response: <span class="built_in">dict</span></span>) -&gt; <span class="built_in">bool</span>:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;检查是否有工具调用&quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;tool_calls&quot;</span> <span class="keyword">in</span> response <span class="keyword">and</span> <span class="built_in">len</span>(response[<span class="string">&quot;tool_calls&quot;</span>]) &gt; <span class="number">0</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">_generate_final_response</span>(<span class="params"></span></span><br><span class="line"><span class="params">        self,</span></span><br><span class="line"><span class="params">        messages: <span class="built_in">list</span>[<span class="built_in">dict</span>],</span></span><br><span class="line"><span class="params">        tool_results: <span class="built_in">list</span>[<span class="built_in">dict</span>]</span></span><br><span class="line"><span class="params">    </span>) -&gt; <span class="built_in">str</span>:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;生成最终响应&quot;&quot;&quot;</span></span><br><span class="line">        <span class="comment"># 实际实现中再次调用 LLM</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">f&quot;Task completed. Results: <span class="subst">&#123;tool_results&#125;</span>&quot;</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="三、最佳实践"><a href="#三、最佳实践" class="headerlink" title="三、最佳实践"></a>三、最佳实践</h2><h3 id="3-1-渐进式启用"><a href="#3-1-渐进式启用" class="headerlink" title="3.1 渐进式启用"></a>3.1 渐进式启用</h3><p>不要在生产环境一次性启用所有功能：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 阶段1：基础工具 + 手动审批</span></span><br><span class="line">harness = Harness(config=&#123;</span><br><span class="line">    <span class="string">&quot;approval_mode&quot;</span>: ApprovalMode.MANUAL,</span><br><span class="line">    <span class="string">&quot;tools&quot;</span>: [<span class="string">&quot;file_read&quot;</span>, <span class="string">&quot;file_write&quot;</span>]  <span class="comment"># 仅基础工具</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 阶段2：增加自动审批 + 更多工具</span></span><br><span class="line">harness.approval_manager.mode = ApprovalMode.SMART</span><br><span class="line">harness.register_tool(ShellExecuteTool())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 阶段3：启用资源治理</span></span><br><span class="line">harness.resource_governor.max_tokens_per_session = <span class="number">1000000</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="3-2-工具设计原则"><a href="#3-2-工具设计原则" class="headerlink" title="3.2 工具设计原则"></a>3.2 工具设计原则</h3><ol>
-<li><strong>单一职责</strong>：每个工具只做一件事</li>
-<li><strong>可测试</strong>：工具逻辑独立于 LLM 调用</li>
-<li><strong>幂等性</strong>：相同输入产生相同输出（避免副作用）</li>
-<li><strong>详细日志</strong>：记录所有输入输出，便于调试</li>
-</ol>
-<h3 id="3-3-安全红线"><a href="#3-3-安全红线" class="headerlink" title="3.3 安全红线"></a>3.3 安全红线</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 永远不要这样做</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">DangerousTool</span>(<span class="title class_ inherited__">Tool</span>):</span><br><span class="line">    <span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">execute</span>(<span class="params">self, command: <span class="built_in">str</span></span>):</span><br><span class="line">        <span class="comment"># ❌ 直接执行任意命令</span></span><br><span class="line">        <span class="keyword">import</span> os</span><br><span class="line">        <span class="keyword">return</span> os.system(command)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 正确做法</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">SafeShellTool</span>(<span class="title class_ inherited__">Tool</span>):</span><br><span class="line">    ALLOWED_COMMANDS = [<span class="string">&quot;ls&quot;</span>, <span class="string">&quot;cat&quot;</span>, <span class="string">&quot;grep&quot;</span>, <span class="string">&quot;find&quot;</span>]</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">execute</span>(<span class="params">self, command: <span class="built_in">str</span></span>):</span><br><span class="line">        <span class="comment"># ✅ 白名单验证</span></span><br><span class="line">        cmd = command.split()[<span class="number">0</span>]</span><br><span class="line">        <span class="keyword">if</span> cmd <span class="keyword">not</span> <span class="keyword">in</span> <span class="variable language_">self</span>.ALLOWED_COMMANDS:</span><br><span class="line">            <span class="keyword">raise</span> ValueError(<span class="string">f&quot;Command not allowed: <span class="subst">&#123;cmd&#125;</span>&quot;</span>)</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># ✅ 使用安全沙箱执行</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">await</span> <span class="variable language_">self</span>._execute_in_sandbox(command)</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-4-监控与告警"><a href="#3-4-监控与告警" class="headerlink" title="3.4 监控与告警"></a>3.4 监控与告警</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">HarnessMonitor</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;Harness 监控器&quot;&quot;&quot;</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, harness: Harness</span>):</span><br><span class="line">        <span class="variable language_">self</span>.harness = harness</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">health_check</span>(<span class="params">self</span>) -&gt; <span class="built_in">dict</span>:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;健康检查&quot;&quot;&quot;</span></span><br><span class="line">        report = <span class="variable language_">self</span>.harness.get_usage_report()</span><br><span class="line">        </span><br><span class="line">        alerts = []</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> report[<span class="string">&quot;token_percentage&quot;</span>] &gt; <span class="number">90</span>:</span><br><span class="line">            alerts.append(<span class="string">&quot;Token usage critical&quot;</span>)</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> report[<span class="string">&quot;cost_percentage&quot;</span>] &gt; <span class="number">90</span>:</span><br><span class="line">            alerts.append(<span class="string">&quot;Cost limit approaching&quot;</span>)</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            <span class="string">&quot;healthy&quot;</span>: <span class="built_in">len</span>(alerts) == <span class="number">0</span>,</span><br><span class="line">            <span class="string">&quot;alerts&quot;</span>: alerts,</span><br><span class="line">            <span class="string">&quot;usage&quot;</span>: report</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="四、从-0-到-1-的-checklist"><a href="#四、从-0-到-1-的-checklist" class="headerlink" title="四、从 0 到 1 的 checklist"></a>四、从 0 到 1 的 checklist</h2><p>在你的项目中构建 Harness，按以下顺序进行：</p>
-<h3 id="Week-1-基础框架"><a href="#Week-1-基础框架" class="headerlink" title="Week 1: 基础框架"></a>Week 1: 基础框架</h3><ul>
-<li><input disabled="" type="checkbox"> 定义 Tool 基类和接口</li>
-<li><input disabled="" type="checkbox"> 实现 3-5 个核心工具（file_read, file_write, shell_execute）</li>
-<li><input disabled="" type="checkbox"> 添加基础错误处理和超时控制</li>
-</ul>
-<h3 id="Week-2-上下文管理"><a href="#Week-2-上下文管理" class="headerlink" title="Week 2: 上下文管理"></a>Week 2: 上下文管理</h3><ul>
-<li><input disabled="" type="checkbox"> 实现系统提示动态构建</li>
-<li><input disabled="" type="checkbox"> 添加对话历史压缩</li>
-<li><input disabled="" type="checkbox"> 集成项目信息注入</li>
-</ul>
-<h3 id="Week-3-安全层"><a href="#Week-3-安全层" class="headerlink" title="Week 3: 安全层"></a>Week 3: 安全层</h3><ul>
-<li><input disabled="" type="checkbox"> 实现审批管理器</li>
-<li><input disabled="" type="checkbox"> 定义危险操作清单</li>
-<li><input disabled="" type="checkbox"> 添加审批回调机制</li>
-</ul>
-<h3 id="Week-4-治理与优化"><a href="#Week-4-治理与优化" class="headerlink" title="Week 4: 治理与优化"></a>Week 4: 治理与优化</h3><ul>
-<li><input disabled="" type="checkbox"> 实现资源治理（token&#x2F;cost 限制）</li>
-<li><input disabled="" type="checkbox"> 添加会话持久化</li>
-<li><input disabled="" type="checkbox"> 集成监控告警</li>
-</ul>
-<h3 id="Week-5-生产准备"><a href="#Week-5-生产准备" class="headerlink" title="Week 5: 生产准备"></a>Week 5: 生产准备</h3><ul>
-<li><input disabled="" type="checkbox"> 完善测试覆盖</li>
-<li><input disabled="" type="checkbox"> 性能优化</li>
-<li><input disabled="" type="checkbox"> 文档编写</li>
-</ul>
-<hr>
-<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>构建一个可靠的 Harness 不是一蹴而就的，而是一个渐进式演进的过程。</p>
-<p>从最简单的工具层开始，逐步添加上下文管理、安全审批、资源治理。每一次迭代都让你的 Agent 更可靠、更可控。</p>
-<p>记住：<strong>Harness 不是限制模型，而是为模型提供一个安全、可预测的工作环境。</strong></p>
-<p>当你的 Harness 足够完善时，你会惊喜地发现：Agent 从「能用」变成了「可靠」，从「实验品」变成了「生产工具」。</p>
-<hr>
-<h2 id="参考资源"><a href="#参考资源" class="headerlink" title="参考资源"></a>参考资源</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code">Claude Code 架构分析</a></li>
-<li><a target="_blank" rel="noopener" href="https://docs.openclaw.ai/acp">OpenClaw ACP 协议</a></li>
-<li><a target="_blank" rel="noopener" href="https://hermes-agent.nousresearch.com/docs/skills">Hermes Agent 技能系统</a></li>
-</ul>
-<p><em>本文代码示例基于 MIT 协议，可自由使用</em></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://sy123053917.github.io/persona-knowladge/2026/04/22/harness-hermes-agent-research/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/persona-knowladge/images/avatar.gif">
-      <meta itemprop="name" content="博主">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="个人博客">
-      <meta itemprop="description" content="分享技术与生活">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | 个人博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/persona-knowladge/2026/04/22/harness-hermes-agent-research/" class="post-title-link" itemprop="url">Harness 与 Hermes Agent 深度研究报告</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2026-04-22 09:30:00 / 修改时间：09:29:43" itemprop="dateCreated datePublished" datetime="2026-04-22T09:30:00+08:00">2026-04-22</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/persona-knowladge/categories/AI/" itemprop="url" rel="index"><span itemprop="name">AI</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/persona-knowladge/categories/AI/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <blockquote>
-<p>如何让 AI Agent 从「工具」进化为「伙伴」？—— 一份关于 Harness Engineering 和 Hermes Agent 的深度研究报告</p>
-</blockquote>
-<hr>
-<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>2026年的 AI Agent 领域出现了两个相互呼应的命题：<strong>Harness Engineering</strong> 和 <strong>Hermes Agent</strong>。</p>
-<p>它们不约而同地回答着同一个根本问题：如何让 AI Agent 从一次性对话的「工具」，进化为能够长期陪伴、持续成长的「伙伴」？</p>
-<hr>
-<h2 id="纵向分析：两条发展脉络"><a href="#纵向分析：两条发展脉络" class="headerlink" title="纵向分析：两条发展脉络"></a>纵向分析：两条发展脉络</h2><h3 id="Harness-Engineering：AI-Agent-的「驯兽师」"><a href="#Harness-Engineering：AI-Agent-的「驯兽师」" class="headerlink" title="Harness Engineering：AI Agent 的「驯兽师」"></a>Harness Engineering：AI Agent 的「驯兽师」</h3><p><strong>起源</strong>：2026年之前，AI Agent 存在一个根本性悖论——大语言模型在单轮对话中表现优异，但在多步骤、长时间执行的生产环境中暴露出系统脆弱性。</p>
-<p><strong>关键节点</strong>：2026年2月，OpenAI 发布《Harness Engineering: Leveraging Codex in an Agent-First World》，揭示了工程化程度是 Agent 可靠性的关键瓶颈。一个没有 Harness 层的 Agent 成功率不足40%，而加入完整的 Harness 层后，成功率跃升至92%以上。</p>
-<p><strong>演进主线</strong>：Claude Code 的意外「被开源」→范式正式确立→OpenClaw 的 ACP 协议标准化。</p>
-<p><strong>核心哲学</strong>：通过工程手段将模型的不确定性约束在可控范围内。让「野性」的模型在安全、可预测的环境中执行任务。</p>
-<h3 id="Hermes-Agent：「会自我进化的数字伙伴」"><a href="#Hermes-Agent：「会自我进化的数字伙伴」" class="headerlink" title="Hermes Agent：「会自我进化的数字伙伴」"></a>Hermes Agent：「会自我进化的数字伙伴」</h3><p><strong>起源</strong>：传统 Agent 患有「失忆症」——每次对话结束后，学到的所有知识全部归零。</p>
-<p><strong>关键节点</strong>：2026年2月，Nous Research 发布 Hermes Agent，定位为「自我改进型 Agent」。</p>
-<p><strong>爆发式增长</strong>：45天内获得 60,000+ GitHub Stars，超越 OpenClaw 的增长曲线。</p>
-<p><strong>技术架构</strong>：</p>
-<ul>
-<li>五层记忆系统（含 Honcho 辩证式用户建模）</li>
-<li>闭环技能学习系统（自动创建→使用→优化）</li>
-<li>RL 训练数据飞轮（使用越多，训练数据越好，下一代模型越强）</li>
-</ul>
-<p><strong>核心哲学</strong>：让 Agent 从经验中学习、在实践中进化，最终成为越用越懂的专属伙伴。</p>
-<hr>
-<h2 id="横向分析：生态位对比"><a href="#横向分析：生态位对比" class="headerlink" title="横向分析：生态位对比"></a>横向分析：生态位对比</h2><h3 id="三个不同的定位"><a href="#三个不同的定位" class="headerlink" title="三个不同的定位"></a>三个不同的定位</h3><table>
-<thead>
-<tr>
-<th>维度</th>
-<th>Harness Engineering</th>
-<th>Hermes Agent</th>
-<th>OpenClaw</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>哲学</strong></td>
-<td>可靠执行</td>
-<td>持续成长</td>
-<td>全栈集成</td>
-</tr>
-<tr>
-<td><strong>生态位</strong></td>
-<td>专业编码助手</td>
-<td>个人 AI 伙伴</td>
-<td>AI 自动化中枢</td>
-</tr>
-<tr>
-<td><strong>核心能力</strong></td>
-<td>工程可靠性</td>
-<td>记忆与进化</td>
-<td>多平台编排</td>
-</tr>
-<tr>
-<td><strong>优势</strong></td>
-<td>安全、可控、可审计</td>
-<td>越用越聪明</td>
-<td>生态丰富</td>
-</tr>
-<tr>
-<td><strong>适用人群</strong></td>
-<td>专业开发者</td>
-<td>长期使用者</td>
-<td>自动化需求者</td>
-</tr>
-</tbody></table>
-<h3 id="真实用户口碑"><a href="#真实用户口碑" class="headerlink" title="真实用户口碑"></a>真实用户口碑</h3><p><strong>Claude Code &#x2F; Harness</strong>：</p>
-<ul>
-<li>「上下文管理太精准了，不需要反复提醒它我项目的结构。」</li>
-</ul>
-<p><strong>Hermes Agent</strong>：</p>
-<ul>
-<li>「第三周开始，我意识到它真的在『记住』我——不只是我说的，还有我做事的方式。」</li>
-</ul>
-<p><strong>OpenClaw</strong>：</p>
-<ul>
-<li>「飞书、微信、钉钉全接进来之后，我的工作流自动化程度直接提升了一个量级。」</li>
-</ul>
-<hr>
-<h2 id="横纵交汇：未来趋势"><a href="#横纵交汇：未来趋势" class="headerlink" title="横纵交汇：未来趋势"></a>横纵交汇：未来趋势</h2><h3 id="趋势一：Harness-与-Hermes-的融合将加速"><a href="#趋势一：Harness-与-Hermes-的融合将加速" class="headerlink" title="趋势一：Harness 与 Hermes 的融合将加速"></a>趋势一：Harness 与 Hermes 的融合将加速</h3><p>未来的 Agent 框架将难以将「工程可靠性」和「认知成长性」割裂。我们已经在看到这一趋势：</p>
-<ul>
-<li>OpenClaw 通过 Self-Improving 技能引入主动学习</li>
-<li>Hermes Agent 在 v0.9 中强化安全审批层</li>
-</ul>
-<h3 id="趋势二：标准化之战"><a href="#趋势二：标准化之战" class="headerlink" title="趋势二：标准化之战"></a>趋势二：标准化之战</h3><p>ACP 协议、MCP、agentskills.io 等标准正在争夺生态主导权。谁将成为 AI Agent 世界的「USB-C」？</p>
-<h3 id="超势三：Personal-Agent-时代开启"><a href="#超势三：Personal-Agent-时代开启" class="headerlink" title="超势三：Personal Agent 时代开启"></a>超势三：Personal Agent 时代开启</h3><p>Hermes Agent 90天内的爆发表明，用户渴望拥有一个真正属于自己的、越用越懂的 AI Agent，而非每次都要重新「入职培训」的通用助手。</p>
-<hr>
-<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>Harness Engineering 回答了「如何让 AI 可靠」。</p>
-<p>Hermes Agent 回答了「如何让 AI 成长」。</p>
-<p>它们不是竞争对手，而是同一场 Agent 革命的两种叙事：</p>
-<ul>
-<li>一个像造车：精密的工程、严格的安全、可靠的系统</li>
-<li>一个像养马：耐心的陪伴、持续的成长、越来越默契</li>
-</ul>
-<p><strong>最好的 Agent 框架，终将同时是优秀的造车厂和温暖的养马人。</strong></p>
-<hr>
-<p><em>报告来源：<a target="_blank" rel="noopener" href="https://github.com/sy123053917/persona-knowladge">https://github.com/sy123053917/persona-knowladge</a></em></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://sy123053917.github.io/persona-knowladge/2026/04/21/weihai-trip-2026-05/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/persona-knowladge/images/avatar.gif">
-      <meta itemprop="name" content="博主">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="个人博客">
-      <meta itemprop="description" content="分享技术与生活">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | 个人博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/persona-knowladge/2026/04/21/weihai-trip-2026-05/" class="post-title-link" itemprop="url">威海亲子游攻略（2026年5月2日-5日）</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2026-04-21 19:00:00 / 修改时间：19:43:41" itemprop="dateCreated datePublished" datetime="2026-04-21T19:00:00+08:00">2026-04-21</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/persona-knowladge/categories/%E6%97%85%E8%A1%8C/" itemprop="url" rel="index"><span itemprop="name">旅行</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <blockquote>
-<p>4个大人 + 3个小孩 | 每天最多1个地方 | 玩水挖沙 | 大人躺平 | 吃饭不排队 | 看日出日落</p>
-</blockquote>
-<hr>
-<h2 id="⚠️-重要提示"><a href="#⚠️-重要提示" class="headerlink" title="⚠️ 重要提示"></a>⚠️ 重要提示</h2><ul>
-<li><strong>5月初海水较冷（10-15°C）</strong>，不能游泳，但可以<strong>挖沙、赶海、踩水</strong></li>
-<li>气温约12-24°C，早晚温差大，需带薄外套</li>
-<li>5月2日晚可能有雷雨，建议准备好雨具</li>
-<li><strong>日出时间</strong>：约5:00-5:30</li>
-<li><strong>日落时间</strong>：约18:30-19:00</li>
-</ul>
-<hr>
-<h2 id="📅-Day-1-5月2日（周五）"><a href="#📅-Day-1-5月2日（周五）" class="headerlink" title="📅 Day 1 - 5月2日（周五）"></a>📅 Day 1 - 5月2日（周五）</h2><p><strong>下午抵达威海 → 入住长青海宴台</strong></p>
-<h3 id="🌤️-天气"><a href="#🌤️-天气" class="headerlink" title="🌤️ 天气"></a>🌤️ 天气</h3><ul>
-<li>气温：13-18°C</li>
-<li>天气：多云转晴</li>
-<li>风力：西北风转西南风，4-5级转&lt;3级</li>
-<li>降水概率：低</li>
-</ul>
-<h3 id="👔-穿衣建议"><a href="#👔-穿衣建议" class="headerlink" title="👔 穿衣建议"></a>👔 穿衣建议</h3><ul>
-<li>白天：长袖T恤 + 薄外套</li>
-<li>早晚：加一件防风外套</li>
-<li>适合：休闲装、运动鞋</li>
-</ul>
-<h3 id="📋-行程"><a href="#📋-行程" class="headerlink" title="📋 行程"></a>📋 行程</h3><ul>
-<li>抵达威海，入住长青海宴台</li>
-<li>附近散步熟悉环境</li>
-<li>晚餐：<strong>巧克力渔家</strong>（韩乐坊店）<ul>
-<li>海鲜蒸汽锅、虾仔沫合酱</li>
-<li>明码标价不宰客，本地人认可</li>
-<li>⚠️ 建议提前1天预约避开排队</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h2 id="📅-Day-2-5月3日（周六）"><a href="#📅-Day-2-5月3日（周六）" class="headerlink" title="📅 Day 2 - 5月3日（周六）"></a>📅 Day 2 - 5月3日（周六）</h2><p><strong>葡萄滩海水浴场（就在酒店附近）</strong></p>
-<h3 id="🌤️-天气-1"><a href="#🌤️-天气-1" class="headerlink" title="🌤️ 天气"></a>🌤️ 天气</h3><ul>
-<li>气温：8-15°C</li>
-<li>天气：多云转阴，可能有阵雨</li>
-<li>风力：西风转南风，4-5级</li>
-<li>降水概率：中等</li>
-</ul>
-<h3 id="👔-穿衣建议-1"><a href="#👔-穿衣建议-1" class="headerlink" title="👔 穿衣建议"></a>👔 穿衣建议</h3><ul>
-<li>白天：长袖 + 薄外套（防风）</li>
-<li>早晚：加一件卫衣或轻薄羽绒服</li>
-<li>海边风大，建议带帽子</li>
-<li>适合：防风外套、帽子</li>
-</ul>
-<h3 id="📋-行程-1"><a href="#📋-行程-1" class="headerlink" title="📋 行程"></a>📋 行程</h3><ul>
-<li>睡到自然醒，酒店早餐</li>
-<li>步行或打车去<strong>葡萄滩海水浴场</strong><ul>
-<li>✅ 距离酒店最近，不用赶路</li>
-<li>✅ 人少沙细，适合亲子挖沙</li>
-<li>✅ 大人可以租沙滩椅躺平</li>
-<li>✅ 赶海、踩水、喂海鸥</li>
-</ul>
-</li>
-<li>午餐：自带简餐或附近小店</li>
-<li>下午继续玩沙、拍照、休息</li>
-<li>返回酒店休息</li>
-<li>晚餐：<strong>赶海归来</strong>（威高广场店）<ul>
-<li>携程口碑榜，海鲜新鲜</li>
-<li>环境宽敞，适合家庭聚餐</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h2 id="📅-Day-3-5月4日（周日）"><a href="#📅-Day-3-5月4日（周日）" class="headerlink" title="📅 Day 3 - 5月4日（周日）"></a>📅 Day 3 - 5月4日（周日）</h2><p><strong>那香海钻石沙滩 + 日落</strong> ⭐</p>
-<h3 id="🌤️-天气-2"><a href="#🌤️-天气-2" class="headerlink" title="🌤️ 天气"></a>🌤️ 天气</h3><ul>
-<li>气温：11-18°C</li>
-<li>天气：多云转晴</li>
-<li>风力：南风，&lt;3级</li>
-<li>降水概率：低</li>
-</ul>
-<h3 id="👔-穿衣建议-2"><a href="#👔-穿衣建议-2" class="headerlink" title="👔 穿衣建议"></a>👔 穿衣建议</h3><ul>
-<li>白天：长袖T恤 + 薄外套</li>
-<li>阳光明媚，防晒霜 + 帽子必备</li>
-<li>适合：轻薄春装、遮阳帽</li>
-</ul>
-<h3 id="📋-行程-2"><a href="#📋-行程-2" class="headerlink" title="📋 行程"></a>📋 行程</h3><ul>
-<li>睡到自然醒，酒店早餐</li>
-<li>前往<strong>那香海钻石沙滩浴场</strong><ul>
-<li>✅ 沙滩面积大，设施完善</li>
-<li>✅ 有儿童游乐设施（滑梯、秋千）</li>
-<li>✅ 大人可租沙滩椅躺平</li>
-</ul>
-</li>
-<li>午餐：度假区内餐厅（人少，不用排队）</li>
-<li>下午继续沙滩玩耍</li>
-<li><strong>🌄 日落时间：约18:30</strong><ul>
-<li>那香海日落是威海最美观赏点之一</li>
-<li>天空从橘红变粉紫，非常浪漫</li>
-</ul>
-</li>
-<li>晚餐：<strong>渔舟蒸宴</strong>（蒸汽海鲜）<ul>
-<li>海鲜当面现蒸，新鲜看得见</li>
-<li>适合带娃，干净卫生</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h2 id="📅-Day-4-5月5日（周一）"><a href="#📅-Day-4-5月5日（周一）" class="headerlink" title="📅 Day 4 - 5月5日（周一）"></a>📅 Day 4 - 5月5日（周一）</h2><p><strong>半月湾日出 + 轻松返程</strong> 🌅</p>
-<h3 id="🌤️-天气-3"><a href="#🌤️-天气-3" class="headerlink" title="🌤️ 天气"></a>🌤️ 天气</h3><ul>
-<li>气温：14-20°C</li>
-<li>天气：多云</li>
-<li>风力：南风转东南风</li>
-<li>降水概率：低</li>
-</ul>
-<h3 id="👔-穿衣建议-3"><a href="#👔-穿衣建议-3" class="headerlink" title="👔 穿衣建议"></a>👔 穿衣建议</h3><ul>
-<li>早上看日出：加厚外套（5-6点较冷）</li>
-<li>白天：长袖 + 薄外套即可</li>
-<li>适合：防风外套、轻便春装</li>
-</ul>
-<h3 id="📋-行程-3"><a href="#📋-行程-3" class="headerlink" title="📋 行程"></a>📋 行程</h3><ul>
-<li><strong>🌅 日出时间：约5:00-5:30</strong><ul>
-<li>早起前往<strong>半月湾公园</strong>看日出</li>
-<li>半月湾形似新月，是威海标志性日出点</li>
-<li>或者从酒店直接去<strong>葡萄滩</strong>看日出，走路就到</li>
-</ul>
-</li>
-<li>返回酒店吃早餐，休息</li>
-<li><strong>半月湾公园</strong>散步（顺路打卡）<ul>
-<li>威海后花园，风景优美</li>
-</ul>
-</li>
-<li>午餐：附近海鲜小店</li>
-<li>返程北京</li>
-</ul>
-<hr>
-<h2 id="🏨-住宿信息"><a href="#🏨-住宿信息" class="headerlink" title="🏨 住宿信息"></a>🏨 住宿信息</h2><p><strong>长青海宴台</strong></p>
-<ul>
-<li>位置：环翠区高尔夫路，环海路一线海景</li>
-<li>特点：<ul>
-<li>距离葡萄滩海水浴场最近</li>
-<li>公寓式酒店，可做饭（7人用餐方便）</li>
-<li>海景房，视野好</li>
-<li>租电瓶车方便，出行灵活</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h2 id="🍽️-餐厅清单（不排队）"><a href="#🍽️-餐厅清单（不排队）" class="headerlink" title="🍽️ 餐厅清单（不排队）"></a>🍽️ 餐厅清单（不排队）</h2><table>
-<thead>
-<tr>
-<th>餐厅</th>
-<th>特色</th>
-<th>建议</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>巧克力渔家</td>
-<td>海鲜蒸汽锅，本地人认可</td>
-<td><strong>提前1天预约</strong></td>
-</tr>
-<tr>
-<td>赶海归来</td>
-<td>携程口碑榜，新鲜</td>
-<td>晚点去（19点后）</td>
-</tr>
-<tr>
-<td>渔舟蒸宴</td>
-<td>蒸汽海鲜，看得见新鲜</td>
-<td>现场选海鲜</td>
-</tr>
-<tr>
-<td>酒店附近小店</td>
-<td>人少，不用排队</td>
-<td>优先选择</td>
-</tr>
-</tbody></table>
-<hr>
-<h2 id="🎒-必备物品"><a href="#🎒-必备物品" class="headerlink" title="🎒 必备物品"></a>🎒 必备物品</h2><ul>
-<li><input disabled="" type="checkbox"> 挖沙工具（桶、铲子、模具）</li>
-<li><input disabled="" type="checkbox"> 防风外套（海边风大，早晚冷）</li>
-<li><input disabled="" type="checkbox"> 雨具（5月2日晚可能雷雨）</li>
-<li><input disabled="" type="checkbox"> 防晒霜、帽子</li>
-<li><input disabled="" type="checkbox"> 儿童换洗衣物（玩水会湿）</li>
-<li><input disabled="" type="checkbox"> 小零食、水</li>
-<li><input disabled="" type="checkbox"> 相机&#x2F;手机（拍日出日落）</li>
-<li><input disabled="" type="checkbox"> 薄羽绒服或加绒卫衣（早晚看日出）</li>
-</ul>
-<hr>
-<h2 id="👔-穿衣总结"><a href="#👔-穿衣总结" class="headerlink" title="👔 穿衣总结"></a>👔 穿衣总结</h2><table>
-<thead>
-<tr>
-<th>场景</th>
-<th>建议穿搭</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>白天日常</td>
-<td>长袖T恤 + 薄外套</td>
-</tr>
-<tr>
-<td>海边玩耍</td>
-<td>防晒霜 + 帽子 + 防风外套</td>
-</tr>
-<tr>
-<td>早晚日出</td>
-<td>加厚外套&#x2F;轻薄羽绒服</td>
-</tr>
-<tr>
-<td>餐厅用餐</td>
-<td>休闲春装即可</td>
-</tr>
-</tbody></table>
-<hr>
-<h2 id="📍-行程特点"><a href="#📍-行程特点" class="headerlink" title="📍 行程特点"></a>📍 行程特点</h2><p>✅ 每天最多1个海滩，不赶路<br>✅ 酒店就在海边，出门就能玩沙<br>✅ 选的都是人少的沙滩，不挤<br>✅ 大人可以躺平，小朋友挖沙玩水<br>✅ 餐厅都是本地人认可的，不宰客、不排队<br>✅ <strong>包含日出日落，浪漫值拉满</strong></p>
-<hr>
-<h2 id="📍-景点距离（从长青海宴台出发）"><a href="#📍-景点距离（从长青海宴台出发）" class="headerlink" title="📍 景点距离（从长青海宴台出发）"></a>📍 景点距离（从长青海宴台出发）</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">葡萄滩海水浴场：步行/打车5分钟 ⭐（可看日出）</span><br><span class="line">金海滩浴场：打车10分钟</span><br><span class="line">福尔图娜女神号海滩：打车20-30分钟</span><br><span class="line">那香海：打车30分钟 ⭐（看日落推荐）</span><br><span class="line">威高广场/韩乐坊：打车15分钟</span><br><span class="line">半月湾公园：打车15分钟 ⭐（看日出推荐）</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="🌅🌄-日出日落观赏点"><a href="#🌅🌄-日出日落观赏点" class="headerlink" title="🌅🌄 日出日落观赏点"></a>🌅🌄 日出日落观赏点</h2><table>
-<thead>
-<tr>
-<th>景点</th>
-<th>适合</th>
-<th>特点</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>半月湾</td>
-<td>日出</td>
-<td>威海标志性日出点，形似新月</td>
-</tr>
-<tr>
-<td>葡萄滩</td>
-<td>日出&#x2F;日落</td>
-<td>离酒店最近，方便</td>
-</tr>
-<tr>
-<td>那香海</td>
-<td>日落</td>
-<td>威海最美日落，视野开阔</td>
-</tr>
-</tbody></table>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
 
 
 
