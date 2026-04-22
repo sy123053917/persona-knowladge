@@ -20,24 +20,32 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"sy123053917.github.io","root":"/persona-knowladge/","images":"/persona-knowladge/images","scheme":"Muse","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/persona-knowladge/js/config.js" defer></script>
 
-    <meta name="description" content="分享技术与生活">
-<meta property="og:type" content="website">
-<meta property="og:title" content="个人博客">
-<meta property="og:url" content="https://sy123053917.github.io/persona-knowladge/index.html">
+    <meta name="description" content="如何让 AI Agent 从「工具」进化为「伙伴」？—— 一份关于 Harness Engineering 和 Hermes Agent 的深度研究报告   引言2026年的 AI Agent 领域出现了两个相互呼应的命题：Harness Engineering 和 Hermes Agent。 它们不约而同地回答着同一个根本问题：如何让 AI Agent 从一次性对话的「工具」，进化为能够长期陪">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Harness 与 Hermes Agent 深度研究报告">
+<meta property="og:url" content="https://sy123053917.github.io/persona-knowladge/2026/04/22/harness-hermes-agent-research/index.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:description" content="分享技术与生活">
+<meta property="og:description" content="如何让 AI Agent 从「工具」进化为「伙伴」？—— 一份关于 Harness Engineering 和 Hermes Agent 的深度研究报告   引言2026年的 AI Agent 领域出现了两个相互呼应的命题：Harness Engineering 和 Hermes Agent。 它们不约而同地回答着同一个根本问题：如何让 AI Agent 从一次性对话的「工具」，进化为能够长期陪">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-04-22T01:30:00.000Z">
+<meta property="article:modified_time" content="2026-04-22T01:29:43.298Z">
 <meta property="article:author" content="博主">
+<meta property="article:tag" content="AI Agent">
+<meta property="article:tag" content="Harness Engineering">
+<meta property="article:tag" content="Hermes Agent">
+<meta property="article:tag" content="OpenClaw">
+<meta property="article:tag" content="人工智能">
+<meta property="article:tag" content="深度研究">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://sy123053917.github.io/persona-knowladge/">
+<link rel="canonical" href="https://sy123053917.github.io/persona-knowladge/2026/04/22/harness-hermes-agent-research/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://sy123053917.github.io/persona-knowladge/2026/04/22/harness-hermes-agent-research/","path":"2026/04/22/harness-hermes-agent-research/","title":"Harness 与 Hermes Agent 深度研究报告"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>个人博客</title>
+<title>Harness 与 Hermes Agent 深度研究报告 | 个人博客</title>
   
 
 
@@ -84,7 +92,7 @@
 
     <a href="/persona-knowladge/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">个人博客</h1>
+      <p class="site-title">个人博客</p>
       <i class="logo-line"></i>
     </a>
   </div>
@@ -106,7 +114,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -119,6 +127,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%B5%E5%90%91%E5%88%86%E6%9E%90%EF%BC%9A%E4%B8%A4%E6%9D%A1%E5%8F%91%E5%B1%95%E8%84%89%E7%BB%9C"><span class="nav-number">2.</span> <span class="nav-text">纵向分析：两条发展脉络</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Harness-Engineering%EF%BC%9AAI-Agent-%E7%9A%84%E3%80%8C%E9%A9%AF%E5%85%BD%E5%B8%88%E3%80%8D"><span class="nav-number">2.1.</span> <span class="nav-text">Harness Engineering：AI Agent 的「驯兽师」</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hermes-Agent%EF%BC%9A%E3%80%8C%E4%BC%9A%E8%87%AA%E6%88%91%E8%BF%9B%E5%8C%96%E7%9A%84%E6%95%B0%E5%AD%97%E4%BC%99%E4%BC%B4%E3%80%8D"><span class="nav-number">2.2.</span> <span class="nav-text">Hermes Agent：「会自我进化的数字伙伴」</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%AA%E5%90%91%E5%88%86%E6%9E%90%EF%BC%9A%E7%94%9F%E6%80%81%E4%BD%8D%E5%AF%B9%E6%AF%94"><span class="nav-number">3.</span> <span class="nav-text">横向分析：生态位对比</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E4%B8%AA%E4%B8%8D%E5%90%8C%E7%9A%84%E5%AE%9A%E4%BD%8D"><span class="nav-number">3.1.</span> <span class="nav-text">三个不同的定位</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9C%9F%E5%AE%9E%E7%94%A8%E6%88%B7%E5%8F%A3%E7%A2%91"><span class="nav-number">3.2.</span> <span class="nav-text">真实用户口碑</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%AA%E7%BA%B5%E4%BA%A4%E6%B1%87%EF%BC%9A%E6%9C%AA%E6%9D%A5%E8%B6%8B%E5%8A%BF"><span class="nav-number">4.</span> <span class="nav-text">横纵交汇：未来趋势</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B6%8B%E5%8A%BF%E4%B8%80%EF%BC%9AHarness-%E4%B8%8E-Hermes-%E7%9A%84%E8%9E%8D%E5%90%88%E5%B0%86%E5%8A%A0%E9%80%9F"><span class="nav-number">4.1.</span> <span class="nav-text">趋势一：Harness 与 Hermes 的融合将加速</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B6%8B%E5%8A%BF%E4%BA%8C%EF%BC%9A%E6%A0%87%E5%87%86%E5%8C%96%E4%B9%8B%E6%88%98"><span class="nav-number">4.2.</span> <span class="nav-text">趋势二：标准化之战</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B6%85%E5%8A%BF%E4%B8%89%EF%BC%9APersonal-Agent-%E6%97%B6%E4%BB%A3%E5%BC%80%E5%90%AF"><span class="nav-number">4.3.</span> <span class="nav-text">超势三：Personal Agent 时代开启</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E8%AF%AD"><span class="nav-number">5.</span> <span class="nav-text">结语</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -156,16 +165,17 @@
 
     </div>
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://sy123053917.github.io/persona-knowladge/2026/04/22/harness-hermes-agent-research/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -179,13 +189,13 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | 个人博客">
+      <meta itemprop="name" content="Harness 与 Hermes Agent 深度研究报告 | 个人博客">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/persona-knowladge/2026/04/22/harness-hermes-agent-research/" class="post-title-link" itemprop="url">Harness 与 Hermes Agent 深度研究报告</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          Harness 与 Hermes Agent 深度研究报告
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -221,8 +231,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
-          <blockquote>
+    <div class="post-body" itemprop="articleBody"><blockquote>
 <p>如何让 AI Agent 从「工具」进化为「伙伴」？—— 一份关于 Harness Engineering 和 Hermes Agent 的深度研究报告</p>
 </blockquote>
 <hr>
@@ -316,7 +325,6 @@
 <hr>
 <p><em>报告来源：<a target="_blank" rel="noopener" href="https://github.com/sy123053917/persona-knowladge">https://github.com/sy123053917/persona-knowladge</a></em></p>
 
-      
     </div>
 
     
@@ -324,325 +332,30 @@
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+          <div class="post-tags">
+              <a href="/persona-knowladge/tags/AI-Agent/" rel="tag"># AI Agent</a>
+              <a href="/persona-knowladge/tags/Harness-Engineering/" rel="tag"># Harness Engineering</a>
+              <a href="/persona-knowladge/tags/Hermes-Agent/" rel="tag"># Hermes Agent</a>
+              <a href="/persona-knowladge/tags/OpenClaw/" rel="tag"># OpenClaw</a>
+              <a href="/persona-knowladge/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" rel="tag"># 人工智能</a>
+              <a href="/persona-knowladge/tags/%E6%B7%B1%E5%BA%A6%E7%A0%94%E7%A9%B6/" rel="tag"># 深度研究</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/persona-knowladge/2026/04/21/weihai-trip-2026-05/" rel="prev" title="威海亲子游攻略（2026年5月2日-5日）">
+                  <i class="fa fa-angle-left"></i> 威海亲子游攻略（2026年5月2日-5日）
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
     </footer>
   </article>
 </div>
 
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://sy123053917.github.io/persona-knowladge/2026/04/21/weihai-trip-2026-05/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/persona-knowladge/images/avatar.gif">
-      <meta itemprop="name" content="博主">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="个人博客">
-      <meta itemprop="description" content="分享技术与生活">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | 个人博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/persona-knowladge/2026/04/21/weihai-trip-2026-05/" class="post-title-link" itemprop="url">威海亲子游攻略（2026年5月2日-5日）</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2026-04-21 19:00:00 / 修改时间：19:43:41" itemprop="dateCreated datePublished" datetime="2026-04-21T19:00:00+08:00">2026-04-21</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/persona-knowladge/categories/%E6%97%85%E8%A1%8C/" itemprop="url" rel="index"><span itemprop="name">旅行</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <blockquote>
-<p>4个大人 + 3个小孩 | 每天最多1个地方 | 玩水挖沙 | 大人躺平 | 吃饭不排队 | 看日出日落</p>
-</blockquote>
-<hr>
-<h2 id="⚠️-重要提示"><a href="#⚠️-重要提示" class="headerlink" title="⚠️ 重要提示"></a>⚠️ 重要提示</h2><ul>
-<li><strong>5月初海水较冷（10-15°C）</strong>，不能游泳，但可以<strong>挖沙、赶海、踩水</strong></li>
-<li>气温约12-24°C，早晚温差大，需带薄外套</li>
-<li>5月2日晚可能有雷雨，建议准备好雨具</li>
-<li><strong>日出时间</strong>：约5:00-5:30</li>
-<li><strong>日落时间</strong>：约18:30-19:00</li>
-</ul>
-<hr>
-<h2 id="📅-Day-1-5月2日（周五）"><a href="#📅-Day-1-5月2日（周五）" class="headerlink" title="📅 Day 1 - 5月2日（周五）"></a>📅 Day 1 - 5月2日（周五）</h2><p><strong>下午抵达威海 → 入住长青海宴台</strong></p>
-<h3 id="🌤️-天气"><a href="#🌤️-天气" class="headerlink" title="🌤️ 天气"></a>🌤️ 天气</h3><ul>
-<li>气温：13-18°C</li>
-<li>天气：多云转晴</li>
-<li>风力：西北风转西南风，4-5级转&lt;3级</li>
-<li>降水概率：低</li>
-</ul>
-<h3 id="👔-穿衣建议"><a href="#👔-穿衣建议" class="headerlink" title="👔 穿衣建议"></a>👔 穿衣建议</h3><ul>
-<li>白天：长袖T恤 + 薄外套</li>
-<li>早晚：加一件防风外套</li>
-<li>适合：休闲装、运动鞋</li>
-</ul>
-<h3 id="📋-行程"><a href="#📋-行程" class="headerlink" title="📋 行程"></a>📋 行程</h3><ul>
-<li>抵达威海，入住长青海宴台</li>
-<li>附近散步熟悉环境</li>
-<li>晚餐：<strong>巧克力渔家</strong>（韩乐坊店）<ul>
-<li>海鲜蒸汽锅、虾仔沫合酱</li>
-<li>明码标价不宰客，本地人认可</li>
-<li>⚠️ 建议提前1天预约避开排队</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h2 id="📅-Day-2-5月3日（周六）"><a href="#📅-Day-2-5月3日（周六）" class="headerlink" title="📅 Day 2 - 5月3日（周六）"></a>📅 Day 2 - 5月3日（周六）</h2><p><strong>葡萄滩海水浴场（就在酒店附近）</strong></p>
-<h3 id="🌤️-天气-1"><a href="#🌤️-天气-1" class="headerlink" title="🌤️ 天气"></a>🌤️ 天气</h3><ul>
-<li>气温：8-15°C</li>
-<li>天气：多云转阴，可能有阵雨</li>
-<li>风力：西风转南风，4-5级</li>
-<li>降水概率：中等</li>
-</ul>
-<h3 id="👔-穿衣建议-1"><a href="#👔-穿衣建议-1" class="headerlink" title="👔 穿衣建议"></a>👔 穿衣建议</h3><ul>
-<li>白天：长袖 + 薄外套（防风）</li>
-<li>早晚：加一件卫衣或轻薄羽绒服</li>
-<li>海边风大，建议带帽子</li>
-<li>适合：防风外套、帽子</li>
-</ul>
-<h3 id="📋-行程-1"><a href="#📋-行程-1" class="headerlink" title="📋 行程"></a>📋 行程</h3><ul>
-<li>睡到自然醒，酒店早餐</li>
-<li>步行或打车去<strong>葡萄滩海水浴场</strong><ul>
-<li>✅ 距离酒店最近，不用赶路</li>
-<li>✅ 人少沙细，适合亲子挖沙</li>
-<li>✅ 大人可以租沙滩椅躺平</li>
-<li>✅ 赶海、踩水、喂海鸥</li>
-</ul>
-</li>
-<li>午餐：自带简餐或附近小店</li>
-<li>下午继续玩沙、拍照、休息</li>
-<li>返回酒店休息</li>
-<li>晚餐：<strong>赶海归来</strong>（威高广场店）<ul>
-<li>携程口碑榜，海鲜新鲜</li>
-<li>环境宽敞，适合家庭聚餐</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h2 id="📅-Day-3-5月4日（周日）"><a href="#📅-Day-3-5月4日（周日）" class="headerlink" title="📅 Day 3 - 5月4日（周日）"></a>📅 Day 3 - 5月4日（周日）</h2><p><strong>那香海钻石沙滩 + 日落</strong> ⭐</p>
-<h3 id="🌤️-天气-2"><a href="#🌤️-天气-2" class="headerlink" title="🌤️ 天气"></a>🌤️ 天气</h3><ul>
-<li>气温：11-18°C</li>
-<li>天气：多云转晴</li>
-<li>风力：南风，&lt;3级</li>
-<li>降水概率：低</li>
-</ul>
-<h3 id="👔-穿衣建议-2"><a href="#👔-穿衣建议-2" class="headerlink" title="👔 穿衣建议"></a>👔 穿衣建议</h3><ul>
-<li>白天：长袖T恤 + 薄外套</li>
-<li>阳光明媚，防晒霜 + 帽子必备</li>
-<li>适合：轻薄春装、遮阳帽</li>
-</ul>
-<h3 id="📋-行程-2"><a href="#📋-行程-2" class="headerlink" title="📋 行程"></a>📋 行程</h3><ul>
-<li>睡到自然醒，酒店早餐</li>
-<li>前往<strong>那香海钻石沙滩浴场</strong><ul>
-<li>✅ 沙滩面积大，设施完善</li>
-<li>✅ 有儿童游乐设施（滑梯、秋千）</li>
-<li>✅ 大人可租沙滩椅躺平</li>
-</ul>
-</li>
-<li>午餐：度假区内餐厅（人少，不用排队）</li>
-<li>下午继续沙滩玩耍</li>
-<li><strong>🌄 日落时间：约18:30</strong><ul>
-<li>那香海日落是威海最美观赏点之一</li>
-<li>天空从橘红变粉紫，非常浪漫</li>
-</ul>
-</li>
-<li>晚餐：<strong>渔舟蒸宴</strong>（蒸汽海鲜）<ul>
-<li>海鲜当面现蒸，新鲜看得见</li>
-<li>适合带娃，干净卫生</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h2 id="📅-Day-4-5月5日（周一）"><a href="#📅-Day-4-5月5日（周一）" class="headerlink" title="📅 Day 4 - 5月5日（周一）"></a>📅 Day 4 - 5月5日（周一）</h2><p><strong>半月湾日出 + 轻松返程</strong> 🌅</p>
-<h3 id="🌤️-天气-3"><a href="#🌤️-天气-3" class="headerlink" title="🌤️ 天气"></a>🌤️ 天气</h3><ul>
-<li>气温：14-20°C</li>
-<li>天气：多云</li>
-<li>风力：南风转东南风</li>
-<li>降水概率：低</li>
-</ul>
-<h3 id="👔-穿衣建议-3"><a href="#👔-穿衣建议-3" class="headerlink" title="👔 穿衣建议"></a>👔 穿衣建议</h3><ul>
-<li>早上看日出：加厚外套（5-6点较冷）</li>
-<li>白天：长袖 + 薄外套即可</li>
-<li>适合：防风外套、轻便春装</li>
-</ul>
-<h3 id="📋-行程-3"><a href="#📋-行程-3" class="headerlink" title="📋 行程"></a>📋 行程</h3><ul>
-<li><strong>🌅 日出时间：约5:00-5:30</strong><ul>
-<li>早起前往<strong>半月湾公园</strong>看日出</li>
-<li>半月湾形似新月，是威海标志性日出点</li>
-<li>或者从酒店直接去<strong>葡萄滩</strong>看日出，走路就到</li>
-</ul>
-</li>
-<li>返回酒店吃早餐，休息</li>
-<li><strong>半月湾公园</strong>散步（顺路打卡）<ul>
-<li>威海后花园，风景优美</li>
-</ul>
-</li>
-<li>午餐：附近海鲜小店</li>
-<li>返程北京</li>
-</ul>
-<hr>
-<h2 id="🏨-住宿信息"><a href="#🏨-住宿信息" class="headerlink" title="🏨 住宿信息"></a>🏨 住宿信息</h2><p><strong>长青海宴台</strong></p>
-<ul>
-<li>位置：环翠区高尔夫路，环海路一线海景</li>
-<li>特点：<ul>
-<li>距离葡萄滩海水浴场最近</li>
-<li>公寓式酒店，可做饭（7人用餐方便）</li>
-<li>海景房，视野好</li>
-<li>租电瓶车方便，出行灵活</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h2 id="🍽️-餐厅清单（不排队）"><a href="#🍽️-餐厅清单（不排队）" class="headerlink" title="🍽️ 餐厅清单（不排队）"></a>🍽️ 餐厅清单（不排队）</h2><table>
-<thead>
-<tr>
-<th>餐厅</th>
-<th>特色</th>
-<th>建议</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>巧克力渔家</td>
-<td>海鲜蒸汽锅，本地人认可</td>
-<td><strong>提前1天预约</strong></td>
-</tr>
-<tr>
-<td>赶海归来</td>
-<td>携程口碑榜，新鲜</td>
-<td>晚点去（19点后）</td>
-</tr>
-<tr>
-<td>渔舟蒸宴</td>
-<td>蒸汽海鲜，看得见新鲜</td>
-<td>现场选海鲜</td>
-</tr>
-<tr>
-<td>酒店附近小店</td>
-<td>人少，不用排队</td>
-<td>优先选择</td>
-</tr>
-</tbody></table>
-<hr>
-<h2 id="🎒-必备物品"><a href="#🎒-必备物品" class="headerlink" title="🎒 必备物品"></a>🎒 必备物品</h2><ul>
-<li><input disabled="" type="checkbox"> 挖沙工具（桶、铲子、模具）</li>
-<li><input disabled="" type="checkbox"> 防风外套（海边风大，早晚冷）</li>
-<li><input disabled="" type="checkbox"> 雨具（5月2日晚可能雷雨）</li>
-<li><input disabled="" type="checkbox"> 防晒霜、帽子</li>
-<li><input disabled="" type="checkbox"> 儿童换洗衣物（玩水会湿）</li>
-<li><input disabled="" type="checkbox"> 小零食、水</li>
-<li><input disabled="" type="checkbox"> 相机&#x2F;手机（拍日出日落）</li>
-<li><input disabled="" type="checkbox"> 薄羽绒服或加绒卫衣（早晚看日出）</li>
-</ul>
-<hr>
-<h2 id="👔-穿衣总结"><a href="#👔-穿衣总结" class="headerlink" title="👔 穿衣总结"></a>👔 穿衣总结</h2><table>
-<thead>
-<tr>
-<th>场景</th>
-<th>建议穿搭</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>白天日常</td>
-<td>长袖T恤 + 薄外套</td>
-</tr>
-<tr>
-<td>海边玩耍</td>
-<td>防晒霜 + 帽子 + 防风外套</td>
-</tr>
-<tr>
-<td>早晚日出</td>
-<td>加厚外套&#x2F;轻薄羽绒服</td>
-</tr>
-<tr>
-<td>餐厅用餐</td>
-<td>休闲春装即可</td>
-</tr>
-</tbody></table>
-<hr>
-<h2 id="📍-行程特点"><a href="#📍-行程特点" class="headerlink" title="📍 行程特点"></a>📍 行程特点</h2><p>✅ 每天最多1个海滩，不赶路<br>✅ 酒店就在海边，出门就能玩沙<br>✅ 选的都是人少的沙滩，不挤<br>✅ 大人可以躺平，小朋友挖沙玩水<br>✅ 餐厅都是本地人认可的，不宰客、不排队<br>✅ <strong>包含日出日落，浪漫值拉满</strong></p>
-<hr>
-<h2 id="📍-景点距离（从长青海宴台出发）"><a href="#📍-景点距离（从长青海宴台出发）" class="headerlink" title="📍 景点距离（从长青海宴台出发）"></a>📍 景点距离（从长青海宴台出发）</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">葡萄滩海水浴场：步行/打车5分钟 ⭐（可看日出）</span><br><span class="line">金海滩浴场：打车10分钟</span><br><span class="line">福尔图娜女神号海滩：打车20-30分钟</span><br><span class="line">那香海：打车30分钟 ⭐（看日落推荐）</span><br><span class="line">威高广场/韩乐坊：打车15分钟</span><br><span class="line">半月湾公园：打车15分钟 ⭐（看日出推荐）</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="🌅🌄-日出日落观赏点"><a href="#🌅🌄-日出日落观赏点" class="headerlink" title="🌅🌄 日出日落观赏点"></a>🌅🌄 日出日落观赏点</h2><table>
-<thead>
-<tr>
-<th>景点</th>
-<th>适合</th>
-<th>特点</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>半月湾</td>
-<td>日出</td>
-<td>威海标志性日出点，形似新月</td>
-</tr>
-<tr>
-<td>葡萄滩</td>
-<td>日出&#x2F;日落</td>
-<td>离酒店最近，方便</td>
-</tr>
-<tr>
-<td>那香海</td>
-<td>日落</td>
-<td>威海最美日落，视野开阔</td>
-</tr>
-</tbody></table>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
 
 
 
